@@ -1,0 +1,38 @@
+version: '2'
+
+
+services:
+  db:
+    image: postgres:9.6
+    expose:
+      - 5432
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - pg_backups:/pg_backups
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=hasker
+
+  nginx:
+    image: nginx:1.14
+    volumes:
+     - ./nginx.conf:/etc/nginx/conf.d/default.conf
+     - static:/opt/hasker/hasker/static
+    ports:
+     - "8000:80"
+    command: /bin/bash -c "nginx -g 'daemon off;'"
+    links:
+     - django
+
+  django:
+    build: .
+    depends_on:
+      - db
+    volumes:
+     - static:/opt/hasker/hasker/static
+
+volumes:
+  pg_data: {}
+  pg_backups: {}
+  static: {}
