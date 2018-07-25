@@ -32,6 +32,7 @@ def get_env_variable(var_name):
 
 
 BASE_DIR = root()
+sys.path.insert(0, os.path.join(BASE_DIR, 'hasker'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -49,6 +50,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'hasker.core',
+    'hasker.profiles',
+    'hasker.search',
 ]
 
 MIDDLEWARE = [
@@ -119,4 +123,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = root('static')
+STATIC_ROOT = root('static_root')
+STATICFILES_DIRS = [root('static')]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = root('media')
+
