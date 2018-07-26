@@ -129,3 +129,6 @@ STATICFILES_DIRS = [root('static')]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = root('media')
 
+# Size of all avatars (width, height) in pixels
+AVATAR_SIZE = (100, 100)
+

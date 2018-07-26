@@ -13,39 +13,76 @@
             <label for="login" class="col-sm-3 col-form-label">Login:</label>
             <div class="col-sm-9">
                 <input type="text" class="form-control" id="login" placeholder="Login" name="username">
+                {% if form.username.errors %}
+                    <div class="errorlist">
+                        <ul>
+                        {% for error in form.username.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
             </div>
-            {% if form.username.errors %}
-                <div class="alert alert-danger" role="alert">
-                    <ol>
-                    {% for error in form.username.errors %}
-                        <li><strong>{{ error|escape }}</strong></li>
-                    {% endfor %}
-                    </ol>
-                </div>
-            {% endif %}
+
         </div>
         <div class="form-group row">
             <label for="email" class="col-sm-3 col-form-label">Email:</label>
             <div class="col-sm-9">
                 <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+                {% if form.email.errors %}
+                    <div class="errorlist">
+                        <ul>
+                        {% for error in form.email.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
             </div>
         </div>
         <div class="form-group row">
             <label for="password1" class="col-sm-3 col-form-label">Password</label>
             <div class="col-sm-9">
                 <input type="password" class="form-control" id="password1" placeholder="Password" name="password1">
+                {% if form.password1.errors %}
+                    <div class="errorlist">
+                        <ul>
+                        {% for error in form.password1.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
             </div>
         </div>
         <div class="form-group row">
             <label for="password2" class="col-sm-3 col-form-label">Repeat Password</label>
             <div class="col-sm-9">
                 <input type="password" class="form-control" id="password2" placeholder="Repeat Password" name="password2">
+                {% if form.password2.errors %}
+                    <div class="errorlist">
+                        <ul>
+                        {% for error in form.password2.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
             </div>
         </div>
         <div class="form-group row">
             <label for="avatar" class="col-sm-3 col-form-label">Avatar</label>
             <div class="col-sm-9">
                 <input type="file" id="avatar" name="avatar">
+                {% if form.avatar.errors %}
+                    <div class="errorlist">
+                        <ul>
+                        {% for error in form.avatar.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Sign up</button>
