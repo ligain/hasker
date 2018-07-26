@@ -105,4 +105,4 @@ venv.bak/
 .idea/
 
 # temp static files
-hasker/media/
+hasker/media/*
