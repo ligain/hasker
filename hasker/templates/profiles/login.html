@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content_title %}
+    <h1 class="mt-5">
+        Log in
+    </h1>
+{% endblock content_title %}
+
+{% block content %}
+    <form method="post" action="">
+        {% csrf_token %}
+        <div class="form-group row">
+            <label for="login" class="col-sm-3 col-form-label">Login:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="login" placeholder="Login" name="username">
+                {% if form.username.errors %}
+                    <div class="errorlist">
+                        <ul>
+                        {% for error in form.username.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+
+        </div>
+        <div class="form-group row">
+            <label for="password" class="col-sm-3 col-form-label">Password</label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                {% if form.password.errors %}
+                    <div class="errorlist">
+                        <ul>
+                        {% for error in form.password.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row col-sm-9 offset-3">
+            {% for error in form.errors.values %}
+                {{ error|escape }}
+            {% endfor %}
+        </div>
+        <button type="submit" class="btn btn-primary">Enter</button>
+    </form>
+{% endblock %}

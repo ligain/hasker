@@ -8,7 +8,24 @@ from django.conf import settings
 from PIL import Image
 
 
-class SignUpForm(UserCreationForm):
+class AvatarMixin:
+    def clean_avatar(self):
+        avatar = self.cleaned_data['avatar']
+
+        if avatar:
+            image = Image.open(avatar.file)
+            output = BytesIO()
+
+            resized_img = image.resize(settings.AVATAR_SIZE)
+            resized_img.save(output, format=avatar.image.format, quality=100)
+
+            avatar.file = output
+            avatar.image = resized_img
+
+        return avatar
+
+
+class SignUpForm(AvatarMixin, UserCreationForm):
     email = forms.EmailField(max_length=255, help_text='Enter a valid email address.')
     avatar = forms.ImageField(required=False)
 
@@ -16,15 +33,11 @@ class SignUpForm(UserCreationForm):
         model = User
         fields = ('username', 'email', 'password1', 'password2', 'avatar')
 
-    def clean_avatar(self):
-        avatar = self.cleaned_data['avatar']
 
-        image = Image.open(avatar.file)
-        output = BytesIO()
+class SettingsForm(AvatarMixin, forms.ModelForm):
+    email = forms.EmailField(max_length=255, required=False)
+    avatar = forms.ImageField(required=False)
 
-        resized_img = image.resize(settings.AVATAR_SIZE)
-        resized_img.save(output, format=avatar.image.format, quality=100)
-
-        avatar.file = output
-        avatar.image = resized_img
-        return avatar
+    class Meta:
+        model = User
+        fields = ('email', 'avatar')

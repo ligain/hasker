@@ -79,6 +79,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'libraries': {
+                'load_avatar_url': 'hasker.templates.templatetags.load_avatar_url'
+            }
         },
     },
 ]
@@ -103,6 +106,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 
 # Internationalization
@@ -130,5 +137,6 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = root('media')
 
 # Size of all avatars (width, height) in pixels
-AVATAR_SIZE = (100, 100)
+AVATAR_SIZE = (64, 64)
+DEFAULT_AVATAR_URL = os.path.join(STATIC_URL, 'img', 'default-avatar-64x64.png')
 
