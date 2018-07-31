@@ -1,7 +1,97 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content_title %}
-    <h1 class="mt-5">
-        Page Heading
+    <h1 class="mt-5 mb-4" id="title" data-ordering="{{ ordering }}">
+        <a href="#" id="title-new">New questions</a>
+         |
+        <a href="#" id="title-hot">Hot questions</a>
     </h1>
 {% endblock content_title %}
+
+{% block content %}
+{#    {% for question in questions %}#}
+{#        #}
+{#        {{ question.title }}#}
+{#        <br>#}
+{#    #}
+{#    {% endfor %}#}
+    <div class="media row border-top border-bottom p-3">
+        <div class="col-sm-1 text-center">
+            <strong>42</strong> votes
+        </div>
+        <div class="col-sm-1 text-center">
+            <strong>42</strong> answers
+        </div>
+        <div class="media-body col-sm-10 ml-3">
+            <h5 class="">
+                <a href="">Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например?</a>
+            </h5>
+            <div class="row">
+                <div class="col-sm-8">
+                    <span class="badge badge-secondary">New</span>
+                    <span class="badge badge-secondary">большинство</span>
+                    <span class="badge badge-secondary">имеет</span>
+                    <span class="badge badge-secondary">приемлемые</span>
+                    <span class="badge badge-secondary">приемлемые</span>
+                </div>
+                <div class="col-sm-4" style="font-size: 0.9em;">
+                    <i class="fas fa-user"></i>
+                    <span> superadmin</span>
+                    <p>asked: 23 Jul 2018 12:67</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="media row border-top border-bottom p-3">
+        <div class="col-sm-1 text-center">
+            <strong>42</strong> votes
+        </div>
+        <div class="col-sm-1 text-center">
+            <strong>42</strong> answers
+        </div>
+        <div class="media-body col-sm-10 ml-3">
+            <h5 class="">
+                <a href="">Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например?</a>
+            </h5>
+            <div class="row">
+                <div class="col-sm-8">
+                    <span class="badge badge-primary">New</span>
+                    <span class="badge badge-primary">большинство</span>
+                    <span class="badge badge-primary">имеет</span>
+                    <span class="badge badge-primary">приемлемые</span>
+                    <span class="badge badge-primary">приемлемые</span>
+                </div>
+                <div class="col-sm-4" style="font-size: 0.9em;">
+                    <i class="fas fa-user"></i>
+                    <span> superadmin</span>
+                    <p>asked: 23 Jul 2018 12:67</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav aria-label="Page navigation" class="mt-5">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+{% endblock content %}
+
+{% block scripts %}
+    <script src="{% static 'js/main.js' %}"></script>
+{% endblock scripts %}

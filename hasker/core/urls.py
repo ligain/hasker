@@ -3,5 +3,7 @@ from hasker.core import views
 
 
 urlpatterns = [
-    path('', views.main_page, name='main_page'),
+    path('', views.MainPageView.as_view(), name='main_page'),
+    path('ask/', views.CreateQuestionView.as_view(), name='ask'),
+    path('question/<slug:slug>', views.QuestionView.as_view(), name='question'),
 ]
