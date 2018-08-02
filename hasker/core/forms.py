@@ -1,6 +1,6 @@
 from django import forms
 
-from hasker.core.models import Question
+from hasker.core.models import Question, Answer
 
 
 class CreateQuestionForm(forms.ModelForm):
@@ -15,3 +15,9 @@ class CreateQuestionForm(forms.ModelForm):
         if ',' not in tags:
             raise forms.ValidationError("Tags should be separated by comma.")
         return tags
+
+
+class CreateAnswerForm(forms.ModelForm):
+    class Meta:
+        model = Answer
+        fields = ('text', )

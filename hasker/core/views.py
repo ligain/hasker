@@ -1,10 +1,14 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import HttpResponseForbidden
 from django.shortcuts import render, redirect
+from django.views import View
 from django.views.generic import CreateView, DetailView, ListView
 from django.utils.text import slugify
+from django.views.generic.detail import SingleObjectMixin
+from django.views.generic.edit import FormMixin, FormView
 
-from hasker.core.forms import CreateQuestionForm
-from hasker.core.models import Question, Tag
+from hasker.core.forms import CreateQuestionForm, CreateAnswerForm
+from hasker.core.models import Question, Tag, Answer
 
 
 class MainPageView(ListView):
@@ -12,7 +16,7 @@ class MainPageView(ListView):
     paginate_by = 20
     model = Question
     context_object_name = 'questions'
-    ordering = 'created_at'
+    ordering = '-created_at'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -51,7 +55,41 @@ class CreateQuestionView(LoginRequiredMixin, CreateView):
         return redirect('question', slug=question_obj.slug)
 
 
-class QuestionView(LoginRequiredMixin, DetailView):
+class CreateAnswerView(SingleObjectMixin, FormView):
+    template_name = 'core/question.html'
+    form_class = CreateAnswerForm
+    model = Question
+
+    def post(self, request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            return HttpResponseForbidden()
+        self.object = self.get_object()
+        return super().post(request, *args, **kwargs)
+
+    def form_valid(self, form):
+        answer_obj = form.save(commit=False)
+        answer_obj.author = self.request.user
+        answer_obj.question = self.object
+        answer_obj.save()
+        return redirect('question', slug=self.kwargs['slug'])
+
+
+class QuestionDetailView(DetailView):
     template_name = 'core/question.html'
     model = Question
     context_object_name = 'question'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form'] = CreateAnswerForm()
+        return context
+
+
+class QuestionView(View):
+    def get(self, request, *args, **kwargs):
+        view = QuestionDetailView.as_view()
+        return view(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        view = CreateAnswerView.as_view()
+        return view(request, *args, **kwargs)

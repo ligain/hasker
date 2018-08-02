@@ -15,6 +15,7 @@ class Question(models.Model):
 
 
 class Answer(models.Model):
+    question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name="answers")
     text = models.TextField()
     author = models.ForeignKey(User, on_delete=models.SET(get_stub_user), related_name="answers")
     created_at = models.DateTimeField(default=timezone.now)

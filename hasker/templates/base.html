@@ -33,7 +33,7 @@
             {% if user.is_authenticated %}
                 <div class="media navbar-nav ml-auto">
                     <a href="{% url 'profiles:settings' %}">
-                        <img class="align-self-start mr-3" src="{% load_avatar_url %}" alt="">
+                        <img class="align-self-start mr-3" src="{% load_avatar_url user %}" alt="">
                     </a>
                     <div class="media-body">
                         <h5 class="mt-0">
