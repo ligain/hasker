@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'hasker.core',
     'hasker.profiles',
     'hasker.search',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +142,11 @@ MEDIA_ROOT = root('media')
 AVATAR_SIZE = (64, 64)
 DEFAULT_AVATAR_URL = os.path.join(STATIC_URL, 'img', 'default-avatar-64x64.png')
 
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
