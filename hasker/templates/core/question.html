@@ -13,9 +13,14 @@
 {% block content %}
     <div class="row mb-5">
         <div class="col-sm-1 rating text-center">
-            <i class="fas fa-angle-up"></i>
-            <strong>42</strong>
-            <i class="fas fa-angle-down"></i>
+            <form action="/vote/" method="post">
+                <input name="content_type_id" type="hidden" value="{{ question.votes.content_type.id }}">
+                <input name="object_id" type="hidden" value="{{ question.id }}">
+                {% csrf_token %}
+                <i class="fas fa-angle-up"></i>
+                <strong>42</strong>
+                <i class="fas fa-angle-down"></i>
+            </form>
         </div>
         <div class="col-sm-11">
             {{ question.text }}
@@ -38,9 +43,14 @@
     {% for answer in question.answers.all %}
         <div class="row py-4 border-top border-bottom">
             <div class="col-sm-1 rating text-center">
-                <i class="fas fa-angle-up"></i>
-                <strong>42</strong>
-                <i class="fas fa-angle-down"></i>
+                <form action="/vote/" method="post">
+                    <input name="content_type_id" type="hidden" value="{{ answer.votes.content_type.id }}">
+                    <input name="object_id" type="hidden" value="{{ answer.id }}">
+                    {% csrf_token %}
+                    <i class="fas fa-angle-up"></i>
+                    <strong>42</strong>
+                    <i class="fas fa-angle-down"></i>
+                </form>
                 {% if answer.is_right %}
                     <i class="fas fa-star text-warning"></i>
                 {% endif %}
@@ -72,3 +82,7 @@
     </form>
 
 {% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/question.js' %}"></script>
+{% endblock scripts %}

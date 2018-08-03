@@ -1,6 +1,6 @@
 from django import forms
 
-from hasker.core.models import Question, Answer
+from hasker.core.models import Question, Answer, Vote
 
 
 class CreateQuestionForm(forms.ModelForm):
@@ -21,3 +21,9 @@ class CreateAnswerForm(forms.ModelForm):
     class Meta:
         model = Answer
         fields = ('text', )
+
+
+class UpdateVoteForm(forms.ModelForm):
+    class Meta:
+        model = Vote
+        fields = ('value', 'object_id', 'content_type')

@@ -1,14 +1,15 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseForbidden
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.views import View
 from django.views.generic import CreateView, DetailView, ListView
 from django.utils.text import slugify
 from django.views.generic.detail import SingleObjectMixin
-from django.views.generic.edit import FormMixin, FormView
+from django.views.generic.edit import FormMixin, FormView, UpdateView
 
-from hasker.core.forms import CreateQuestionForm, CreateAnswerForm
-from hasker.core.models import Question, Tag, Answer
+from hasker.core.forms import CreateQuestionForm, CreateAnswerForm, UpdateVoteForm
+from hasker.core.models import Question, Tag, Answer, Vote
 
 
 class MainPageView(ListView):
@@ -93,3 +94,30 @@ class QuestionView(View):
     def post(self, request, *args, **kwargs):
         view = CreateAnswerView.as_view()
         return view(request, *args, **kwargs)
+
+
+class VoteUpdateView(LoginRequiredMixin, UpdateView):
+    template_name = 'core/question.html'
+    model = Vote
+    form_class = UpdateVoteForm
+
+    # def post(self, request, *args, **kwargs):
+    #     if not request.user.is_authenticated:
+    #         return HttpResponseForbidden()
+    #     self.object = self.get_object()
+    #     return super().post(request, *args, **kwargs)
+
+    def form_valid(self, form):
+        print(1)
+        return HttpResponseRedirect(self.get_success_url())
+
+
+def update_vote(request):
+    if request.method == 'POST':
+        form = UpdateVoteForm(request.POST)
+        if form.is_valid():
+            return redirect('main_page')
+
+    else:
+        form = UpdateVoteForm(instance=request.user)
+    return redirect('question')

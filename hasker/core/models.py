@@ -1,8 +1,17 @@
+from django.contrib.contenttypes.fields import GenericForeignKey, GenericRelation
+from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 
 from hasker.profiles.models import get_stub_user
+
+
+VOTE_CHOISES = (
+    (-1, 'down'),
+    (0, 'none'),
+    (1, 'up')
+)
 
 
 class Question(models.Model):
@@ -12,6 +21,7 @@ class Question(models.Model):
     author = models.ForeignKey(User, on_delete=models.SET(get_stub_user), related_name="questions")
     created_at = models.DateTimeField(default=timezone.now)
     slug = models.SlugField(unique=True, null=True)
+    votes = GenericRelation("Vote")
 
 
 class Answer(models.Model):
@@ -20,7 +30,17 @@ class Answer(models.Model):
     author = models.ForeignKey(User, on_delete=models.SET(get_stub_user), related_name="answers")
     created_at = models.DateTimeField(default=timezone.now)
     is_right = models.BooleanField(default=False)
+    votes = GenericRelation("Vote")
 
 
 class Tag(models.Model):
     name = models.CharField(max_length=100)
+
+
+class Vote(models.Model):
+    author = models.ForeignKey(User, on_delete=models.SET(get_stub_user), related_name="votes")
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    object_id = models.PositiveIntegerField()
+    receiver = GenericForeignKey('content_type', 'object_id')
+    value = models.SmallIntegerField(choices=VOTE_CHOISES, default=0)
+
