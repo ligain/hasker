@@ -21,9 +21,3 @@ class CreateAnswerForm(forms.ModelForm):
     class Meta:
         model = Answer
         fields = ('text', )
-
-
-class UpdateVoteForm(forms.ModelForm):
-    class Meta:
-        model = Vote
-        fields = ('value', 'object_id', 'content_type')

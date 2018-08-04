@@ -8,7 +8,7 @@ from django.utils.text import slugify
 from django.views.generic.detail import SingleObjectMixin
 from django.views.generic.edit import FormMixin, FormView, UpdateView
 
-from hasker.core.forms import CreateQuestionForm, CreateAnswerForm, UpdateVoteForm
+from hasker.core.forms import CreateQuestionForm, CreateAnswerForm
 from hasker.core.models import Question, Tag, Answer, Vote
 
 

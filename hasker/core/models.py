@@ -3,6 +3,7 @@ from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from django.db.models import Sum
 
 from hasker.profiles.models import get_stub_user
 
@@ -31,6 +32,13 @@ class Answer(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     is_right = models.BooleanField(default=False)
     votes = GenericRelation("Vote")
+
+    @property
+    def rating(self):
+        rating_dict = self.votes.aggregate(Sum('value'))
+        if rating_dict.get('value__sum') is None:
+            return 0
+        return rating_dict.get('value__sum')
 
 
 class Tag(models.Model):

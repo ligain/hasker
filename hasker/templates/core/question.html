@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% load load_avatar_url %}
+{% load rating_system %}
 
 
 {% block content_title %}
@@ -18,7 +19,7 @@
                 <input name="object_id" type="hidden" value="{{ question.id }}">
                 {% csrf_token %}
                 <i class="fas fa-angle-up"></i>
-                <strong>42</strong>
+                <strong class="rating-counter-js">42</strong>
                 <i class="fas fa-angle-down"></i>
             </form>
         </div>
@@ -43,22 +44,19 @@
     {% for answer in question.answers.all %}
         <div class="row py-4 border-top border-bottom">
             <div class="col-sm-1 rating text-center">
-                <input name="content_type_id" type="hidden" value="{{ answer.votes.content_type.id }}">
-                <input name="object_id" type="hidden" value="{{ answer.id }}">
-                {% csrf_token %}
                 <i
-                        class="fas fa-angle-up"
-                        data-content-type="{{ answer.votes.content_type.id }}"
-                        data-object-id="{{ answer.id }}"
-                        data-value="1"></i>
+                    class="fas fa-angle-up {% voted_class user answer 1 %}"
+                    data-content-type="{{ answer.votes.content_type.id }}"
+                    data-object-id="{{ answer.id }}"
+                    data-value="1"></i>
 
-                <strong id="answer_counter">42</strong>
+                <strong class="rating-counter-js">{{ answer.rating }}</strong>
 
                 <i
-                        class="fas fa-angle-down"
-                        data-content-type="{{ answer.votes.content_type.id }}"
-                        data-object-id="{{ answer.id }}"
-                        data-value="-1"></i>
+                    class="fas fa-angle-down {% voted_class user answer -1 %}"
+                    data-content-type="{{ answer.votes.content_type.id }}"
+                    data-object-id="{{ answer.id }}"
+                    data-value="-1"></i>
 
                 {% if answer.is_right %}
                     <i class="fas fa-star text-warning"></i>

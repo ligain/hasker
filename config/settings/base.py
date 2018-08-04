@@ -82,7 +82,8 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
             'libraries': {
-                'load_avatar_url': 'hasker.templates.templatetags.load_avatar_url'
+                'load_avatar_url': 'hasker.templates.templatetags.load_avatar_url',
+                'rating_system': 'hasker.templates.templatetags.rating_system'
             }
         },
     },
