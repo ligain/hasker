@@ -94,30 +94,3 @@ class QuestionView(View):
     def post(self, request, *args, **kwargs):
         view = CreateAnswerView.as_view()
         return view(request, *args, **kwargs)
-
-
-class VoteUpdateView(LoginRequiredMixin, UpdateView):
-    template_name = 'core/question.html'
-    model = Vote
-    form_class = UpdateVoteForm
-
-    # def post(self, request, *args, **kwargs):
-    #     if not request.user.is_authenticated:
-    #         return HttpResponseForbidden()
-    #     self.object = self.get_object()
-    #     return super().post(request, *args, **kwargs)
-
-    def form_valid(self, form):
-        print(1)
-        return HttpResponseRedirect(self.get_success_url())
-
-
-def update_vote(request):
-    if request.method == 'POST':
-        form = UpdateVoteForm(request.POST)
-        if form.is_valid():
-            return redirect('main_page')
-
-    else:
-        form = UpdateVoteForm(instance=request.user)
-    return redirect('question')

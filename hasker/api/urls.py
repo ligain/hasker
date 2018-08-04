@@ -6,5 +6,5 @@ router = DefaultRouter()
 
 urlpatterns = [
     url(r'^', include(router.urls)),
-    url(r'votes/', views.snippet_list)
+    url(r'votes/', views.VoteApiView.as_view())
 ]
