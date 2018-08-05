@@ -1,6 +1,7 @@
 $(function () {
     var csrftoken = $("[name=csrfmiddlewaretoken]").val();
     var arrow_highlight_class = 'text-primary';
+    var star_highlight_class = 'text-warning';
 
     function csrfSafeMethod(method) {
         // these HTTP methods do not require CSRF protection
@@ -62,12 +63,18 @@ $(function () {
     });
     
     $('.fa-star').on('click', function () {
-        // console.log($(this));
+        if (! $(this).data("answer-id")) {
+            $('.modal-body').text("Only author can choose the right answer!");
+            $('#error').modal('show');
+            return
+        }
+
         var url = "/api/v1/answers/" + $(this).data("answer-id") + "/";
         var data = {
-            "is_right": $(this).data("is-right")
+            "is_right": !$(this).hasClass(star_highlight_class)
         };
-        console.log(data);
+        var star = $(this);
+
         $.ajax({
             type: "patch",
             url: url,
@@ -75,9 +82,23 @@ $(function () {
             data: data,
             xhrFields: {withCredentials: true},
             success: function (data) {
+                if (data.is_right) {
+                    star.removeClass('far').addClass('fas');
+                    star.addClass(star_highlight_class);
+                } else {
+                    star.removeClass('fas').addClass('far');
+                    star.removeClass(star_highlight_class);
+                }
                 console.log(data);
             },
             error: function (error) {
+                if (error.responseJSON) {
+                    var error_msg = error.responseJSON.is_right[0];
+                } else {
+                    var error_msg = error.statusText
+                }
+                $('.modal-body').text(error_msg);
+                $('#error').modal('show');
                 console.log("request to " + url + " failed with an error: ", error);
             }
         })
