@@ -14,14 +14,20 @@
 {% block content %}
     <div class="row mb-5">
         <div class="col-sm-1 rating text-center">
-            <form action="/vote/" method="post">
-                <input name="content_type_id" type="hidden" value="{{ question.votes.content_type.id }}">
-                <input name="object_id" type="hidden" value="{{ question.id }}">
-                {% csrf_token %}
-                <i class="fas fa-angle-up"></i>
-                <strong class="rating-counter-js">42</strong>
-                <i class="fas fa-angle-down"></i>
-            </form>
+            <i
+                    class="fas fa-angle-up {% voted_class user question 1 %}"
+                    data-content-type="{{ question.votes.content_type.id }}"
+                    data-object-id="{{ question.id }}"
+                    data-value="1"></i>
+
+                <strong class="rating-counter-js">{{ question.rating }}</strong>
+
+                <i
+                    class="fas fa-angle-down {% voted_class user question -1 %}"
+                    data-content-type="{{ question.votes.content_type.id }}"
+                    data-object-id="{{ question.id }}"
+                    data-value="-1"></i>
+
         </div>
         <div class="col-sm-11">
             {{ question.text }}
@@ -58,9 +64,10 @@
                     data-object-id="{{ answer.id }}"
                     data-value="-1"></i>
 
-                {% if answer.is_right %}
-                    <i class="fas fa-star text-warning"></i>
-                {% endif %}
+                <i
+                    class="far fa-star"
+                    data-answer-id="{{ answer.id }}"
+                    data-is-right="{{ answer.is_right }}"></i>
             </div>
             <div class="col-sm-11">
                 {{ answer.text }}

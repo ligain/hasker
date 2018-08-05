@@ -24,6 +24,13 @@ class Question(models.Model):
     slug = models.SlugField(unique=True, null=True)
     votes = GenericRelation("Vote")
 
+    @property
+    def rating(self):
+        rating_dict = self.votes.aggregate(Sum('value'))
+        if rating_dict.get('value__sum') is None:
+            return 0
+        return rating_dict.get('value__sum')
+
 
 class Answer(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name="answers")
