@@ -1,15 +1,20 @@
+import re
+from urllib.parse import quote
+
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models import Sum, Value, Q
+from django.db.models.functions import Coalesce
 from django.http import HttpResponseForbidden
-from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect
+from django.urls import reverse
 from django.views import View
-from django.views.generic import CreateView, DetailView, ListView
+from django.views.generic import CreateView, DetailView, ListView, RedirectView
 from django.utils.text import slugify
 from django.views.generic.detail import SingleObjectMixin
-from django.views.generic.edit import FormMixin, FormView, UpdateView
+from django.views.generic.edit import FormView
 
 from hasker.core.forms import CreateQuestionForm, CreateAnswerForm
-from hasker.core.models import Question, Tag, Answer, Vote
+from hasker.core.models import Question, Tag
 
 
 class MainPageView(ListView):
@@ -32,7 +37,9 @@ class MainPageView(ListView):
         ordering_tag = self.request.GET.get('order_by')
         queryset = super().get_queryset()
         if ordering_tag == 'hot':
-            pass
+            queryset = queryset.annotate(
+                votes_rating=Coalesce(Sum('votes__value'), Value(0))
+            ).order_by('-votes_rating')
         return queryset
 
 
@@ -94,3 +101,48 @@ class QuestionView(View):
     def post(self, request, *args, **kwargs):
         view = CreateAnswerView.as_view()
         return view(request, *args, **kwargs)
+
+
+class SearchView(ListView):
+    template_name = 'core/search.html'
+    paginate_by = 20
+    model = Question
+    context_object_name = 'questions'
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        queryset = super().get_queryset()
+        if query:
+            queryset = queryset.filter(
+                Q(title__icontains=query) |
+                Q(text__icontains=query)
+            ).annotate(
+                votes_rating=Coalesce(Sum('votes__value'), Value(0))
+            ).order_by('-votes_rating', '-created_at')
+        return queryset
+
+
+class TagView(ListView):
+    template_name = 'core/tags.html'
+    paginate_by = 20
+    model = Question
+    context_object_name = 'questions'
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(tags__name=self.kwargs.get('name'))
+
+
+class SearchRedirectView(RedirectView):
+
+    permanent = False
+    query_string = True
+
+    def get_redirect_url(self, *args, **kwargs):
+        input_string = self.request.POST.get('search')
+        parsed_input = re.match(r'tag:(\w+)', input_string)
+        if parsed_input:
+            tag_name = parsed_input.group(1)
+            return reverse('tag', args=(tag_name, ))
+        search_url = '{}?q={}'.format(reverse('search'), input_string)
+        return quote(search_url, safe='/?=')

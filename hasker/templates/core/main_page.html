@@ -14,10 +14,10 @@
     {% for question in questions %}
         <div class="media row border-top border-bottom p-3">
             <div class="col-sm-1 text-center">
-                <strong>42</strong> votes
+                <strong>{{ question.rating }}</strong> votes
             </div>
             <div class="col-sm-1 text-center">
-                <strong>42</strong> answers
+                <strong>{{ question.answers.count }}</strong> answers
             </div>
             <div class="media-body col-sm-10 ml-3">
                 <h5>

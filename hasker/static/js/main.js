@@ -6,4 +6,6 @@ $(function () {
     } else if (ordering === 'new') {
         $('#title-new').addClass('text-muted');
     }
+
+
 });

@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'hasker.core',
     'hasker.profiles',
-    'hasker.search',
     'rest_framework',
 ]
 
