@@ -79,6 +79,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'hasker.core.context_processors.trending'
             ],
             'libraries': {
                 'load_avatar_url': 'hasker.templates.templatetags.load_avatar_url',

@@ -85,8 +85,12 @@
                 <a class="btn btn-success btn-block" href="{% url 'ask' %}">Ask!</a>
             {% endif %}
             <h3 class="trending">Trending</h3>
-            <p><span class="badge btn-primary">100</span> How to python?</p>
-            <p><span class="badge btn-primary">98</span> How to otus?</p>
+            {% for trending_question in trending_questions %}
+                <p>
+                    <span class="badge btn-primary">{{ trending_question.rating }}</span>
+                    <a href="{% url 'question' trending_question.slug %}">{{ trending_question.title }}</a>
+                </p>
+            {% endfor %}
         </div>
 
     </div> <!-- /.row -->

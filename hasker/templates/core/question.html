@@ -89,21 +89,23 @@
         </div>
     {% endfor %}
 
-    <form action="" method="post" class="mt-5">
-        {% csrf_token %}
-        <label for="text" class="col-sm-3 col-form-label h4">Your answer:</label>
-        <textarea class="form-control" rows="5" id="text" name="text" placeholder="..."></textarea>
-        {% if form.text.errors %}
-            <div class="errorlist">
-                <ul>
-                    {% for error in form.text.errors %}
-                        <li><strong>{{ error|escape }}</strong></li>
-                    {% endfor %}
-                </ul>
-            </div>
-        {% endif %}
-        <button type="submit" class="btn btn-primary my-3">Answer</button>
-    </form>
+    {% if user.is_authenticated %}
+        <form action="" method="post" class="mt-5">
+            {% csrf_token %}
+            <label for="text" class="col-sm-3 col-form-label h4">Your answer:</label>
+            <textarea class="form-control" rows="5" id="text" name="text" placeholder="..."></textarea>
+            {% if form.text.errors %}
+                <div class="errorlist">
+                    <ul>
+                        {% for error in form.text.errors %}
+                            <li><strong>{{ error|escape }}</strong></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            <button type="submit" class="btn btn-primary my-3">Answer</button>
+        </form>
+    {% endif %}
 
     <!-- Modal -->
     <div class="modal fade" id="error" tabindex="-1" role="dialog" aria-labelledby="errorLabel"
