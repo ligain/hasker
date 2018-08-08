@@ -53,7 +53,7 @@ class CreateQuestionView(LoginRequiredMixin, CreateView):
         question_obj = form.save(commit=False)
         question_obj.author = self.request.user
         question_title = form.cleaned_data['title']
-        question_obj.slug = slugify(question_title)
+        question_obj.slug = slugify(question_title)[:49]
         question_obj.save()
         raw_tags = form.cleaned_data['tags']
         for raw_tag in raw_tags.split(','):

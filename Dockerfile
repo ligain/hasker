@@ -7,6 +7,7 @@ RUN apt-get update \
 	    python3-pip
 
 COPY . /opt/hasker
+WORKDIR /opt/hasker
 
 RUN pip3 install -r /opt/hasker/requirements/production.txt
 EXPOSE 8000
@@ -19,5 +20,7 @@ ENV DB_PASSWORD="postgres"
 ENV DB_HOST="db"
 ENV DB_PORT="5432"
 
-ENTRYPOINT python3 manage.py collectstatic --noinput \
+ENTRYPOINT python3 manage.py migrate \
+    && python3 manage.py loaddata initial_data.json \
+    && python3 manage.py collectstatic --noinput \
     && uwsgi --ini /opt/hasker/uwsgi.ini

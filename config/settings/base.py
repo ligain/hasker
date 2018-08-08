@@ -139,6 +139,8 @@ STATICFILES_DIRS = [root('static')]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = root('media')
 
+FIXTURE_DIRS = [root('fixtures')]
+
 # Size of all avatars (width, height) in pixels
 AVATAR_SIZE = (64, 64)
 DEFAULT_AVATAR_URL = os.path.join(STATIC_URL, 'img', 'default-avatar-64x64.png')
