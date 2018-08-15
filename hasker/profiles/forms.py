@@ -2,7 +2,7 @@ from io import BytesIO
 
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.conf import settings
 
 from PIL import Image
@@ -30,7 +30,7 @@ class SignUpForm(AvatarMixin, UserCreationForm):
     avatar = forms.ImageField(required=False)
 
     class Meta:
-        model = User
+        model = get_user_model()
         fields = ('username', 'email', 'password1', 'password2', 'avatar')
 
 
@@ -39,5 +39,5 @@ class SettingsForm(AvatarMixin, forms.ModelForm):
     avatar = forms.ImageField(required=False)
 
     class Meta:
-        model = User
+        model = get_user_model()
         fields = ('email', 'avatar')

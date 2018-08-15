@@ -10,7 +10,7 @@ def signup(request):
         form = SignUpForm(request.POST, request.FILES)
         if form.is_valid():
             user_obj = form.save()
-            user_obj.profile.avatar = form.cleaned_data.get('avatar')
+            user_obj.avatar = form.cleaned_data.get('avatar')
             user_obj.save()
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
@@ -29,7 +29,7 @@ def settings(request):
         if form.is_valid():
             user_obj = form.save(commit=False)
             if form.cleaned_data.get('avatar'):
-                user_obj.profile.avatar = form.cleaned_data.get('avatar')
+                user_obj.avatar = form.cleaned_data.get('avatar')
             user_obj.save()
             return redirect('main_page')
 

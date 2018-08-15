@@ -38,7 +38,7 @@ class MainPageView(ListView):
         queryset = super().get_queryset()
         if ordering_tag == 'hot':
             queryset = queryset.annotate(
-                votes_rating=Coalesce(Sum('votes__value'), Value(0))
+                votes_rating=Coalesce(Sum('votereceiver_ptr__vote__value'), Value(0))
             ).order_by('-votes_rating')
         return queryset
 
@@ -77,7 +77,7 @@ class CreateAnswerView(SingleObjectMixin, FormView):
     def form_valid(self, form):
         answer_obj = form.save(commit=False)
         answer_obj.author = self.request.user
-        answer_obj.question = self.object
+        answer_obj.parent_question = self.object
         answer_obj.save()
         return redirect('question', slug=self.kwargs['slug'])
 

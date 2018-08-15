@@ -1,4 +1,5 @@
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
+
 from rest_framework import serializers
 
 from hasker.core.models import Vote, Answer
@@ -19,7 +20,7 @@ class AuthorValidator:
 
 class VoteSerializer(serializers.ModelSerializer):
     author = serializers.PrimaryKeyRelatedField(
-        queryset=User.objects.all(),
+        queryset=get_user_model().objects.all(),
         default=serializers.CurrentUserDefault()
     )
 
