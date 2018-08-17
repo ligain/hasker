@@ -3,7 +3,7 @@ from rest_framework.generics import GenericAPIView, UpdateAPIView
 from rest_framework.response import Response
 
 from hasker.api.serializers import VoteSerializer, RightAnswerSerializer
-from hasker.core.models import Vote, Answer, Question
+from hasker.core.models import Vote, Question
 
 
 class VoteApiView(GenericAPIView):

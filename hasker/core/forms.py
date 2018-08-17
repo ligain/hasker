@@ -2,7 +2,7 @@ import re
 
 from django import forms
 
-from hasker.core.models import Question, Answer, Vote
+from hasker.core.models import Question, Answer
 
 
 class CreateQuestionForm(forms.ModelForm):
