@@ -17,13 +17,6 @@
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "auth",
-        "model": "user"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "auth",
         "model": "group"
     }
 },
@@ -45,13 +38,6 @@
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "core",
-        "model": "answer"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "core",
         "model": "vote"
     }
 },
@@ -66,6 +52,20 @@
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "core",
+        "model": "votereceiver"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "core",
+        "model": "answer"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "core",
         "model": "question"
     }
 },
@@ -73,407 +73,202 @@
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "profiles",
-        "model": "userprofile"
+        "model": "user"
     }
 },
 {
     "model": "sessions.session",
-    "pk": "j9dpnjv8themg8p1fckrfhveqvxjffwn",
+    "pk": "whki9ix9uuvige3uatd1l3sy76qs2lc2",
     "fields": {
-        "session_data": "ZmZkNzJlNWMyOTliMzYzYzgxMGFiYWZiNjRiODRjMzYxODBmMjQ2MDp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9oYXNoIjoiZjJkZDkwMzhjY2M2ODdjMmNhNjYxMmNhODI3YzU2MjhhODg0ZTJjNSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
-        "expire_date": "2018-08-22T16:38:45.561Z"
+        "session_data": "NjkwMjM3MTZmMzcwM2NjYTY3YTFkNDQ5NTNlZGY0ZTI5M2U2N2UwMDp7Il9hdXRoX3VzZXJfaGFzaCI6IjI4MWU5NzBkNjdmZWFiODc1Mjk3NGNkZDQxN2MzOTI3NzY4ZTQ1ODciLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
+        "expire_date": "2018-08-31T17:41:34.353Z"
     }
+},
+{
+    "model": "core.votereceiver",
+    "pk": 1,
+    "fields": {}
+},
+{
+    "model": "core.votereceiver",
+    "pk": 2,
+    "fields": {}
+},
+{
+    "model": "core.votereceiver",
+    "pk": 3,
+    "fields": {}
+},
+{
+    "model": "core.votereceiver",
+    "pk": 4,
+    "fields": {}
+},
+{
+    "model": "core.votereceiver",
+    "pk": 5,
+    "fields": {}
+},
+{
+    "model": "core.votereceiver",
+    "pk": 6,
+    "fields": {}
+},
+{
+    "model": "core.votereceiver",
+    "pk": 7,
+    "fields": {}
+},
+{
+    "model": "core.votereceiver",
+    "pk": 8,
+    "fields": {}
+},
+{
+    "model": "core.votereceiver",
+    "pk": 9,
+    "fields": {}
+},
+{
+    "model": "core.votereceiver",
+    "pk": 10,
+    "fields": {}
+},
+{
+    "model": "core.votereceiver",
+    "pk": 11,
+    "fields": {}
+},
+{
+    "model": "core.votereceiver",
+    "pk": 12,
+    "fields": {}
+},
+{
+    "model": "core.votereceiver",
+    "pk": 13,
+    "fields": {}
+},
+{
+    "model": "core.votereceiver",
+    "pk": 14,
+    "fields": {}
+},
+{
+    "model": "core.votereceiver",
+    "pk": 15,
+    "fields": {}
 },
 {
     "model": "core.tag",
     "pk": 1,
-    "fields": {
-        "name": "angularjs"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 2,
-    "fields": {
-        "name": "php"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 3,
-    "fields": {
-        "name": "symfony"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 4,
-    "fields": {
-        "name": "symfony-security"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 5,
-    "fields": {
-        "name": "java"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 6,
-    "fields": {
-        "name": "android"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 7,
-    "fields": {
-        "name": "mp4parser"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 8,
-    "fields": {
-        "name": "conflicting-libraries"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 9,
-    "fields": {
-        "name": "ios"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 10,
-    "fields": {
-        "name": "swift"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 11,
-    "fields": {
-        "name": "firebase"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 12,
-    "fields": {
-        "name": "firebase-authentication"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 13,
-    "fields": {
-        "name": "bluetooth"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 14,
-    "fields": {
-        "name": "voip-android"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 15,
     "fields": {
         "name": "python"
     }
 },
 {
     "model": "core.tag",
-    "pk": 16,
+    "pk": 2,
     "fields": {
-        "name": "opencv"
+        "name": "python-2"
     }
 },
 {
     "model": "core.tag",
-    "pk": 17,
-    "fields": {
-        "name": "scikit-learn"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 18,
-    "fields": {
-        "name": "scikit-image"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 19,
-    "fields": {
-        "name": "excel"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 20,
-    "fields": {
-        "name": "excel-vba"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 21,
-    "fields": {
-        "name": "tensorflow"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 22,
-    "fields": {
-        "name": "machine-learning"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 23,
-    "fields": {
-        "name": "reactjs"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 24,
-    "fields": {
-        "name": "react-router"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 25,
+    "pk": 3,
     "fields": {
         "name": "javascript"
     }
 },
 {
     "model": "core.tag",
-    "pk": 26,
-    "fields": {
-        "name": "twitter-bootstrap"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 28,
-    "fields": {
-        "name": "amazon-web-services"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 29,
-    "fields": {
-        "name": "amazon-s3"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 30,
-    "fields": {
-        "name": "backup"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 31,
-    "fields": {
-        "name": "amazon-glacier"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 32,
-    "fields": {
-        "name": "opengl"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 33,
-    "fields": {
-        "name": "pygame"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 34,
-    "fields": {
-        "name": "window"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 35,
-    "fields": {
-        "name": "pyopengl"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 36,
-    "fields": {
-        "name": "c"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 37,
-    "fields": {
-        "name": "loops"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 38,
-    "fields": {
-        "name": "for-loop"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 39,
-    "fields": {
-        "name": "nested"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 40,
-    "fields": {
-        "name": "nodejs"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 41,
-    "fields": {
-        "name": "npm"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 42,
-    "fields": {
-        "name": "jestjs"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 43,
-    "fields": {
-        "name": "dot-net"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 44,
-    "fields": {
-        "name": "logging"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 45,
-    "fields": {
-        "name": "ecmascript-6"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 46,
-    "fields": {
-        "name": "functional-programming"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 47,
-    "fields": {
-        "name": "function"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 49,
-    "fields": {
-        "name": "cpp"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 50,
-    "fields": {
-        "name": "unordered-map"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 51,
-    "fields": {
-        "name": "random"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 52,
-    "fields": {
-        "name": "java-stream"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 53,
-    "fields": {
-        "name": "generics"
-    }
-},
-{
-    "model": "core.tag",
-    "pk": 54,
+    "pk": 4,
     "fields": {
         "name": "html"
     }
 },
 {
     "model": "core.tag",
-    "pk": 55,
+    "pk": 5,
     "fields": {
         "name": "css"
     }
 },
 {
     "model": "core.tag",
-    "pk": 56,
+    "pk": 6,
     "fields": {
-        "name": "html5"
+        "name": "cs-cart"
     }
 },
 {
     "model": "core.tag",
-    "pk": 57,
+    "pk": 7,
     "fields": {
-        "name": "css3"
+        "name": "ffmpeg"
     }
 },
 {
     "model": "core.tag",
-    "pk": 58,
+    "pk": 8,
     "fields": {
-        "name": "css-selectors"
+        "name": "stream"
+    }
+},
+{
+    "model": "core.tag",
+    "pk": 9,
+    "fields": {
+        "name": "live"
+    }
+},
+{
+    "model": "core.tag",
+    "pk": 10,
+    "fields": {
+        "name": "rtmp"
+    }
+},
+{
+    "model": "core.tag",
+    "pk": 11,
+    "fields": {
+        "name": "php"
+    }
+},
+{
+    "model": "core.tag",
+    "pk": 12,
+    "fields": {
+        "name": "mysql"
+    }
+},
+{
+    "model": "core.tag",
+    "pk": 13,
+    "fields": {
+        "name": "json"
+    }
+},
+{
+    "model": "core.tag",
+    "pk": 14,
+    "fields": {
+        "name": "mysqli"
+    }
+},
+{
+    "model": "core.tag",
+    "pk": 15,
+    "fields": {
+        "name": "laravel"
+    }
+},
+{
+    "model": "core.tag",
+    "pk": 16,
+    "fields": {
+        "name": "href"
     }
 },
 {
@@ -527,32 +322,8 @@
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add user",
-        "content_type": 3,
-        "codename": "add_user"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change user",
-        "content_type": 3,
-        "codename": "change_user"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete user",
-        "content_type": 3,
-        "codename": "delete_user"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
         "name": "Can add group",
-        "content_type": 4,
+        "content_type": 3,
         "codename": "add_group"
     }
 },
@@ -560,7 +331,7 @@
     "model": "auth.permission",
     "fields": {
         "name": "Can change group",
-        "content_type": 4,
+        "content_type": 3,
         "codename": "change_group"
     }
 },
@@ -568,7 +339,7 @@
     "model": "auth.permission",
     "fields": {
         "name": "Can delete group",
-        "content_type": 4,
+        "content_type": 3,
         "codename": "delete_group"
     }
 },
@@ -576,7 +347,7 @@
     "model": "auth.permission",
     "fields": {
         "name": "Can add content type",
-        "content_type": 5,
+        "content_type": 4,
         "codename": "add_contenttype"
     }
 },
@@ -584,7 +355,7 @@
     "model": "auth.permission",
     "fields": {
         "name": "Can change content type",
-        "content_type": 5,
+        "content_type": 4,
         "codename": "change_contenttype"
     }
 },
@@ -592,7 +363,7 @@
     "model": "auth.permission",
     "fields": {
         "name": "Can delete content type",
-        "content_type": 5,
+        "content_type": 4,
         "codename": "delete_contenttype"
     }
 },
@@ -600,7 +371,7 @@
     "model": "auth.permission",
     "fields": {
         "name": "Can add session",
-        "content_type": 6,
+        "content_type": 5,
         "codename": "add_session"
     }
 },
@@ -608,7 +379,7 @@
     "model": "auth.permission",
     "fields": {
         "name": "Can change session",
-        "content_type": 6,
+        "content_type": 5,
         "codename": "change_session"
     }
 },
@@ -616,39 +387,15 @@
     "model": "auth.permission",
     "fields": {
         "name": "Can delete session",
-        "content_type": 6,
+        "content_type": 5,
         "codename": "delete_session"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add answer",
-        "content_type": 7,
-        "codename": "add_answer"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change answer",
-        "content_type": 7,
-        "codename": "change_answer"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete answer",
-        "content_type": 7,
-        "codename": "delete_answer"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
         "name": "Can add vote",
-        "content_type": 8,
+        "content_type": 6,
         "codename": "add_vote"
     }
 },
@@ -656,7 +403,7 @@
     "model": "auth.permission",
     "fields": {
         "name": "Can change vote",
-        "content_type": 8,
+        "content_type": 6,
         "codename": "change_vote"
     }
 },
@@ -664,7 +411,7 @@
     "model": "auth.permission",
     "fields": {
         "name": "Can delete vote",
-        "content_type": 8,
+        "content_type": 6,
         "codename": "delete_vote"
     }
 },
@@ -672,7 +419,7 @@
     "model": "auth.permission",
     "fields": {
         "name": "Can add tag",
-        "content_type": 9,
+        "content_type": 7,
         "codename": "add_tag"
     }
 },
@@ -680,7 +427,7 @@
     "model": "auth.permission",
     "fields": {
         "name": "Can change tag",
-        "content_type": 9,
+        "content_type": 7,
         "codename": "change_tag"
     }
 },
@@ -688,8 +435,56 @@
     "model": "auth.permission",
     "fields": {
         "name": "Can delete tag",
-        "content_type": 9,
+        "content_type": 7,
         "codename": "delete_tag"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add vote receiver",
+        "content_type": 8,
+        "codename": "add_votereceiver"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change vote receiver",
+        "content_type": 8,
+        "codename": "change_votereceiver"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete vote receiver",
+        "content_type": 8,
+        "codename": "delete_votereceiver"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add answer",
+        "content_type": 9,
+        "codename": "add_answer"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change answer",
+        "content_type": 9,
+        "codename": "change_answer"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete answer",
+        "content_type": 9,
+        "codename": "delete_answer"
     }
 },
 {
@@ -719,49 +514,51 @@
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add user profile",
+        "name": "Can add user",
         "content_type": 11,
-        "codename": "add_userprofile"
+        "codename": "add_user"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change user profile",
+        "name": "Can change user",
         "content_type": 11,
-        "codename": "change_userprofile"
+        "codename": "change_user"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete user profile",
+        "name": "Can delete user",
         "content_type": 11,
-        "codename": "delete_userprofile"
+        "codename": "delete_user"
     }
 },
 {
-    "model": "auth.user",
+    "model": "profiles.user",
     "fields": {
-        "password": "pbkdf2_sha256$100000$Tl3r8TDIUR5w$Go8YWkvpth50bN+XtriYuFfQlwq4jxTQA+UEJmE2gdI=",
-        "last_login": null,
-        "is_superuser": true,
-        "username": "superuser",
+        "password": "pbkdf2_sha256$100000$wC3f5JWnNrtj$VmST5AbGorDtdPKaMR4d1wKho3OWoiXSj+kD4xJ25a0=",
+        "last_login": "2018-08-17T17:41:34.345Z",
+        "is_superuser": false,
+        "username": "AqibBangash",
         "first_name": "",
         "last_name": "",
-        "email": "super@example.com",
-        "is_staff": true,
+        "email": "AqibBangash@example.com",
+        "is_staff": false,
         "is_active": true,
-        "date_joined": "2018-08-08T13:55:44.489Z",
+        "date_joined": "2018-08-15T19:56:08.231Z",
+        "avatar": "",
+        "created_at": "2018-08-15T19:56:08.231Z",
         "groups": [],
         "user_permissions": []
     }
 },
 {
-    "model": "auth.user",
+    "model": "profiles.user",
     "fields": {
-        "password": "pbkdf2_sha256$100000$rIgv1I2gvycs$w000Fdj45GUyec0tegn9Zmt5DMi7qctH+zufTGAGWNw=",
-        "last_login": "2018-08-08T16:38:45.545Z",
+        "password": "pbkdf2_sha256$100000$r2LzIS8wAM5q$5eLu5uKgNTbq0PlYc73+50EbAmDiPHMVzhB6s6nt6j0=",
+        "last_login": "2018-08-17T17:35:55.334Z",
         "is_superuser": true,
         "username": "superadmin",
         "first_name": "",
@@ -769,853 +566,57 @@
         "email": "super@example.com",
         "is_staff": true,
         "is_active": true,
-        "date_joined": "2018-08-08T14:05:06.179Z",
+        "date_joined": "2018-08-15T20:13:24.682Z",
+        "avatar": "",
+        "created_at": "2018-08-15T20:13:24.682Z",
         "groups": [],
         "user_permissions": []
     }
 },
 {
-    "model": "auth.user",
+    "model": "profiles.user",
     "fields": {
-        "password": "pbkdf2_sha256$100000$VqkROAIevd0p$Mh8dFtYOnH79vYX5d2svo0ii1X/Puw5+CPgcJy411cA=",
-        "last_login": "2018-08-08T15:15:57.816Z",
+        "password": "pbkdf2_sha256$100000$2czhT8OqJfdw$7dqTBJD1mAsWxvgpy/3GKBlNftUan3aWNfu+8uIz6bI=",
+        "last_login": "2018-08-17T17:30:38.432Z",
         "is_superuser": false,
-        "username": "hiddeneyes02",
+        "username": "dzervas",
         "first_name": "",
         "last_name": "",
-        "email": "hiddeneyes02@example.com",
+        "email": "dzervas@example.com",
         "is_staff": false,
         "is_active": true,
-        "date_joined": "2018-08-08T14:15:52.622Z",
+        "date_joined": "2018-08-17T17:30:38.251Z",
+        "avatar": "",
+        "created_at": "2018-08-17T17:30:38.251Z",
         "groups": [],
         "user_permissions": []
     }
 },
 {
-    "model": "auth.user",
+    "model": "profiles.user",
     "fields": {
-        "password": "pbkdf2_sha256$100000$FSGB5OTGFxEJ$W4WhbkgNRcaP5g0uUhFmrpMYOC04HTUx3h22SjgW/sk=",
-        "last_login": "2018-08-08T14:20:42.935Z",
+        "password": "pbkdf2_sha256$100000$sifIITiPMbRL$a1Ed9VWdzHTqxatpDpqyX57jBojw10mlNrFOKvemSNw=",
+        "last_login": "2018-08-17T17:39:18.486Z",
         "is_superuser": false,
-        "username": "AqibBangash",
+        "username": "Flamms",
         "first_name": "",
         "last_name": "",
-        "email": "angash@example.com",
+        "email": "Flamms@example.com",
         "is_staff": false,
         "is_active": true,
-        "date_joined": "2018-08-08T14:20:42.747Z",
+        "date_joined": "2018-08-17T17:39:18.310Z",
+        "avatar": "",
+        "created_at": "2018-08-17T17:39:18.310Z",
         "groups": [],
         "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "fields": {
-        "password": "pbkdf2_sha256$100000$xHPAJ2RZBpQC$zdphjWmr/5EAIb3BqO7OrS2C1O3ilYXrxaMGNVux4Sg=",
-        "last_login": "2018-08-08T15:17:05.646Z",
-        "is_superuser": false,
-        "username": "Sergey_Z",
-        "first_name": "",
-        "last_name": "",
-        "email": "sergey@example.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2018-08-08T14:29:00.952Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "fields": {
-        "password": "pbkdf2_sha256$100000$RlPR6aUqUehD$kYrLDocylLhA+0b010J0+XwdgMDvcdygZ72EKX40y0o=",
-        "last_login": "2018-08-08T14:32:13.426Z",
-        "is_superuser": false,
-        "username": "excelguy",
-        "first_name": "",
-        "last_name": "",
-        "email": "excelguy@example.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2018-08-08T14:32:13.248Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "fields": {
-        "password": "pbkdf2_sha256$100000$FERqrYJVlbcJ$nH3u4hzdwzbzuNzjyxTvKszQbseelnGThnkKwb5IFyE=",
-        "last_login": "2018-08-08T14:36:42.093Z",
-        "is_superuser": false,
-        "username": "stackoverflowuser2010",
-        "first_name": "",
-        "last_name": "",
-        "email": "stackoverflowuser@example.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2018-08-08T14:36:41.909Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "fields": {
-        "password": "pbkdf2_sha256$100000$zw3YgJgtPb7Z$/ZPzpEWV/EaVBoIFSlM9gSko2HVzodzGqlH5dAasA9M=",
-        "last_login": "2018-08-08T14:40:14.789Z",
-        "is_superuser": false,
-        "username": "learnAsWeGo",
-        "first_name": "",
-        "last_name": "",
-        "email": "learnAsWeGo@example.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2018-08-08T14:40:14.570Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "fields": {
-        "password": "pbkdf2_sha256$100000$rZeutDi6MWjy$GKwhis+sXUdu1fe5nTCs5G1gfLg63Cwq8dySdKSud1o=",
-        "last_login": "2018-08-08T14:45:24.777Z",
-        "is_superuser": false,
-        "username": "anya",
-        "first_name": "",
-        "last_name": "",
-        "email": "anya@example.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2018-08-08T14:45:24.587Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "fields": {
-        "password": "pbkdf2_sha256$100000$MTs8puEZoGq0$bfPxT7n+WtCOi95Shg/0O3mbVFLIaEcULX+l6ivJh6w=",
-        "last_login": "2018-08-08T14:49:39.789Z",
-        "is_superuser": false,
-        "username": "Quintin",
-        "first_name": "",
-        "last_name": "",
-        "email": "Quintin@example.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2018-08-08T14:49:39.610Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "fields": {
-        "password": "pbkdf2_sha256$100000$pUt8NySatXmK$s4CnsCXL5uDA3MbU1l6qw0SVxtfVTUROkwmJX/BcEnU=",
-        "last_login": "2018-08-08T14:54:28.790Z",
-        "is_superuser": false,
-        "username": "JBraha",
-        "first_name": "",
-        "last_name": "",
-        "email": "JBraha@example.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2018-08-08T14:54:28.601Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "fields": {
-        "password": "pbkdf2_sha256$100000$PxOfdlSeCElT$ZGWSTv4s2vxSGkvmmPJgPaeFnYYrVi8BfBQdd8v31uM=",
-        "last_login": "2018-08-08T14:58:59.337Z",
-        "is_superuser": false,
-        "username": "amirdehghan",
-        "first_name": "",
-        "last_name": "",
-        "email": "amirdehghan@example.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2018-08-08T14:58:59.134Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "fields": {
-        "password": "pbkdf2_sha256$100000$UK7ClBCIMFAB$Und5Wg7hbXcHCrcV7RC9bUW5iBQtCbX/NUZPftF38Mk=",
-        "last_login": "2018-08-08T15:04:27.889Z",
-        "is_superuser": false,
-        "username": "dasblinkenlight",
-        "first_name": "",
-        "last_name": "",
-        "email": "dasblinkenlight@example.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2018-08-08T15:04:27.687Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "fields": {
-        "password": "pbkdf2_sha256$100000$yms7qcSpRI2h$OlTHINbKSbf6m9pshT5IrDl76XCF+SwGaV1TQdDFVso=",
-        "last_login": "2018-08-08T15:11:04.031Z",
-        "is_superuser": false,
-        "username": "Eugene",
-        "first_name": "",
-        "last_name": "",
-        "email": "Eugene@example.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2018-08-08T15:11:03.830Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "fields": {
-        "password": "pbkdf2_sha256$100000$8Fl2iyRwlDXN$NsCSp10d6eJpfwuoP9Bv1DsqkXfaWRnA6mU8g34mURA=",
-        "last_login": "2018-08-08T15:14:30.210Z",
-        "is_superuser": false,
-        "username": "jammaster",
-        "first_name": "",
-        "last_name": "",
-        "email": "jammaster@example.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2018-08-08T15:14:30.009Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "core.question",
-    "pk": 1,
-    "fields": {
-        "title": "why do I need a timeout when modifying the dom in angular",
-        "text": "Like the headline says, I don't understand why I need a $timeout when manipulating the DOM inside a directive's link function.\r\n\r\nThe code below works. The element in question is a 1x1 div that holds a container for a video plugin. If I remove the $timeout, the element is not resized and is not visible. Removing the $timeout and replacing it with $rootScope.$apply() does not work. There is no ajax calls being waited on. I simply want to resize an element on a user action.\r\n\r\nMy problem is that the timeout time is really arbitrary and on older browsers running on older computers I need a bigger timeout value in the range of 1500ms, which works about 90% of the time. Even 1500ms is ridiculous and I certainly don't want to make it greater.",
-        "author": 2,
-        "created_at": "2018-08-08T14:07:41.569Z",
-        "slug": "why-do-i-need-a-timeout-when-modifying-the-dom-in",
-        "tags": [
-            1
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 2,
-    "fields": {
-        "title": "How to authenticate/authorize anonymous user for a limited time?",
-        "text": "Let's say I have an invoice entity. Invoice belongs to some user (invoices.user_id).\r\n\r\nIf the user enters myapp.com/invoices/1 he needs to sign in to gain access to his invoice. That's pretty normal.\r\n\r\nSometimes invoices.user_id is null (invoice owner doesn't have an account in our system), but we have an invoices.phone_number column.\r\n\r\nThe goal is to create an authentication system based on SMS code verification for users that don't have the account in our system. If the user confirms that he indeed owns phone number related to the invoice (code verification) I want to grant him temporary access (15 min) to this invoice details page (and only this page).\r\n\r\nMy first idea was to use a JWT token stored in the session.\r\n\r\nMy second idea was to use a custom firewall.\r\n\r\nIs there any better approach?",
-        "author": 2,
-        "created_at": "2018-08-08T14:09:27.921Z",
-        "slug": "how-to-authenticateauthorize-anonymous-user-for-a",
-        "tags": [
-            2,
-            3,
-            4
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 3,
-    "fields": {
-        "title": "mp4parser version conflict (compressed video has no sound)",
-        "text": "I am using these two libraries in my project:\r\n\r\nhttps://github.com/HemendraGangwar/VideoTrimmingLikeWhatsapp https://github.com/fishwjy/VideoCompressor\r\n\r\nBoth libraries are imported locally to my project (i.e. copied them and added them to the project)\r\n\r\nBoth libraries work fine when used separately, but when I use them together I get some errors of type Program type already present which I solved by deleting the file isoparser-1.0.6.jar from the second library, because I noticed that the two libraries use the same library 'com.googlecode.mp4parser:isoparser' but with different versions: 1.1.21 for the first one and  1.0.6 for the second one.",
-        "author": 3,
-        "created_at": "2018-08-08T14:16:45.230Z",
-        "slug": "mp4parser-version-conflict-compressed-video-has-n",
-        "tags": [
-            5,
-            6,
-            7,
-            8
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 4,
-    "fields": {
-        "title": "Google Firebase - Phone Authentication results Error on some phones",
-        "text": "I'm using Google Firebase for Phone Number Verification in iOS (Swift) App. At Every Step I have logged status at my end. Same process works for most, but results error on some devices with No possible information on why its doing like this.\r\n\r\nOn Most of the process works Fine. FCM Fake Token for Verification is received -> Firebase results with success. SMS is received & Verified.\r\n\r\nOn Some Phones the process works Wrong. FCM Fake Token for Verification is received -> Firebase results with error -> SMS is NOT received.\r\n\r\nError says \"There seems to be a problem with your project's Firebase phone number authentication set-up, please make sure to follow the instructions found at",
-        "author": 3,
-        "created_at": "2018-08-08T14:17:34.453Z",
-        "slug": "google-firebase-phone-authentication-results-erro",
-        "tags": [
-            9,
-            10,
-            11,
-            12
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 5,
-    "fields": {
-        "title": "Accepting a Call via Bluetooth Headset VoIP",
-        "text": "I am working on a VoIP-Android-App and The app needs to be able to accept/decline call thought Bluetooth headset.\r\nBut the problem is that after adding connection to SCO",
-        "author": 5,
-        "created_at": "2018-08-08T14:30:25.642Z",
-        "slug": "accepting-a-call-via-bluetooth-headset-voip",
-        "tags": [
-            6,
-            13,
-            14
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 6,
-    "fields": {
-        "title": "Method to determine polygon surface rotation from top-down camera",
-        "text": "I have a webcam looking down on a surface which rotates about a single-axis. I'd like to be able to measure the rotation angle of the surface.\r\n\r\nThe camera position and the rotation axis of the surface are both fixed. The surface is a distinct solid color right now, but I do have the option to draw features on the surface if it would help.\r\n\r\nHere's an animation of the surface moving through its full range, showing the different apparent shapes:",
-        "author": 5,
-        "created_at": "2018-08-08T14:31:35.354Z",
-        "slug": "method-to-determine-polygon-surface-rotation-from",
-        "tags": [
-            15,
-            16,
-            17,
-            18
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 7,
-    "fields": {
-        "title": "VBA, Combine PDFs into one PDF file",
-        "text": "I am trying to combine PDF's into one single pdf with the use of vba. I would like to not use a plug in tool and have tried with acrobat api below.\r\n\r\nI have tried something like, but cannot seem to get it to work. I get no error msg but perhaps I am missing parts.\r\n\r\nAny help would be appreciated.",
-        "author": 6,
-        "created_at": "2018-08-08T14:35:23.160Z",
-        "slug": "vba-combine-pdfs-into-one-pdf-file",
-        "tags": [
-            19,
-            20
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 8,
-    "fields": {
-        "title": "Distributed Tensorflow: who applies the parameter update?",
-        "text": "I've used TensorFlow but am new to distributed TensorFlow for training models. My understanding is that current best practices favor the data parallel model with asynchronous updates:\r\n\r\nA paper published by the Google Brain team in April 2016 benchmarked various approaches and found that data parallelism with synchronous updates using a few spare replicas was the most efficient, not only converging faster but also producing a better model. -- Chapter 12 of Hands-On Machine Learning with Scikit-Learn and Tensorflow.\r\n\r\nNow, my confusion from reading further about this architecture is figuring out which component applies the parameter updates: the workers or the parameter server?\r\n\r\nIn my illustration below, it's clear to me that the workers compute the gradients dJ/dw (the gradient of the loss J with respect to the parameter weights w). But who applies the gradient descent update rule?",
-        "author": 6,
-        "created_at": "2018-08-08T14:36:00.193Z",
-        "slug": "distributed-tensorflow-who-applies-the-parameter-",
-        "tags": [
-            21,
-            22
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 9,
-    "fields": {
-        "title": "Why does my Animated view not stay in the correct place in React Native?",
-        "text": "I created a \"circle bar\" (group of views) that switch from grey to yellow as the images move. The circles start to transform correctly but then go back to the first spot instead of going to the next circle spot to indict that you are on the next image. The yellow circle just always goes back to the first spot no matter what. Does anyone know why this might be happening?? How do I get it to stay in the next spot?",
-        "author": 9,
-        "created_at": "2018-08-08T14:45:56.009Z",
-        "slug": "why-does-my-animated-view-not-stay-in-the-correct",
-        "tags": [
-            23,
-            24
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 10,
-    "fields": {
-        "title": "Combining color hex blending algorithm with standard CMYK colored buttons",
-        "text": "I am trying to blend any combination of colors using colored buttons which output a specific hex number in combination with a slider bar from bootstrap that allows the user to indicate the percentage of color they want to use.\r\n\r\nI couldn't get the slider to properly run and I'm not sure why.",
-        "author": 9,
-        "created_at": "2018-08-08T14:46:36.263Z",
-        "slug": "combining-color-hex-blending-algorithm-with-stand",
-        "tags": [
-            25,
-            26
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 11,
-    "fields": {
-        "title": "Download all objects from a S3 bucket, including glacier restored",
-        "text": "I have set a number of files for restore from glacier to S3 and I want to download it all \u2013 the whole bucket.\r\n\r\nWhen I browse the s3 bucket from the web console, I don\u2019t see the glacier restored items (unless I show the version).\r\n\r\nIs there a way to download all the bucket files to the local drive, including glacier restored ones?",
-        "author": 10,
-        "created_at": "2018-08-08T14:50:10.007Z",
-        "slug": "download-all-objects-from-a-s3-bucket-including-g",
-        "tags": [
-            28,
-            29,
-            30,
-            31
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 12,
-    "fields": {
-        "title": "OpenGL render view without a visible window in python",
-        "text": "I need to render some scene. I managed to do it in python using pyopengl and pygame. The problem is that it creates a window for a short period of time.\r\n\r\nI want to render the same image and save it, without creating a visible window (Or possibly without creating a window at all, and even without pygame).",
-        "author": 10,
-        "created_at": "2018-08-08T14:51:11.922Z",
-        "slug": "opengl-render-view-without-a-visible-window-in-py",
-        "tags": [
-            15,
-            32,
-            33,
-            34,
-            35
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 13,
-    "fields": {
-        "title": "Can a 'for' loop inside of a 'for' loop use the same counter variable name?",
-        "text": "Can I use the same counter variable for a for loop inside of a for loop?\r\n\r\nOr will the variables affect each other? Should the following code use a different variable for the second loop, such as j, or is i fine?",
-        "author": 11,
-        "created_at": "2018-08-08T14:54:55.749Z",
-        "slug": "can-a-for-loop-inside-of-a-for-loop-use-the-same-",
-        "tags": [
-            36,
-            37,
-            38,
-            39
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 14,
-    "fields": {
-        "title": "Jest SecurityError: localStorage is not available for opaque origins",
-        "text": "When I want to run my project with the command npm run test, I get the error below. What is causing this?",
-        "author": 12,
-        "created_at": "2018-08-08T15:00:06.955Z",
-        "slug": "jest-securityerror-localstorage-is-not-available-",
-        "tags": [
-            25,
-            40,
-            41,
-            42
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 15,
-    "fields": {
-        "title": "Should I take ILogger, ILogger<T>, ILoggerFactory or ILoggerProvider for a library?",
-        "text": "This may be somewhat related to Pass ILogger or ILoggerFactory to constructors in AspNet Core?, however this is specifically about Library Design, not about how the actual application that uses those libraries implement its logging.\r\n\r\nI am writing a .net Standard 2.0 Library that will be installed via Nuget, and to allow people using that Library to get some debug info, I'm depending on Microsoft.Extensions.Logging.Abstractions to allow a standardized Logger to be injected.\r\n\r\nHowever, I'm seeing multiple interfaces, and sample code on the web sometimes uses ILoggerFactory and creates a logger in the ctor of the class. There's also ILoggerProvider which looks like a read-only version of the Factory, but implementations may or may not implement both interfaces, so I'd have to pick. (Factory seems more common than Provider).\r\n\r\nSome code I've seen uses the non-generic ILogger interface and might even share one instance of the same logger, and some take an ILogger<T> in their ctor and expect the DI container to support open generic types or explicit registration of each and every ILogger<T> variation my library uses.\r\n\r\nRight now, I do think that ILogger<T> is the right approach, and maybe a ctor that doesn't take that argument and just passes a Null Logger instead. That way, if no logging is needed, none is used. However, some DI containers pick the largest ctor and thus would fail anyway.",
-        "author": 12,
-        "created_at": "2018-08-08T15:03:58.168Z",
-        "slug": "should-i-take-ilogger-iloggert-iloggerfactory-or-",
-        "tags": [
-            36,
-            43,
-            44
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 16,
-    "fields": {
-        "title": "Is there a functional way to init an array in JavaScript ES6?",
-        "text": "I finally gave up and wrote a for loop to initialize a simple array of objects where each object has an incremented counter (id) as an attribute of the object.",
-        "author": 13,
-        "created_at": "2018-08-08T15:06:17.855Z",
-        "slug": "is-there-a-functional-way-to-init-an-array-in-jav",
-        "tags": [
-            25,
-            45,
-            46
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 17,
-    "fields": {
-        "title": "JavaScript validation of multiple Booleans [duplicate]",
-        "text": "I want to validate an object that has three Boolean properties, of which one, and only one, must be true. What is the best way to check this?",
-        "author": 13,
-        "created_at": "2018-08-08T15:07:44.305Z",
-        "slug": "javascript-validation-of-multiple-booleans-duplic",
-        "tags": [
-            25
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 18,
-    "fields": {
-        "title": "What is the difference between a Predicate and a Function Interface in Java8?",
-        "text": "I know it may be a very basic question on SO but I want to know what is the difference between a Predicate and a Function Interface in Java8?",
-        "author": 13,
-        "created_at": "2018-08-08T15:08:52.492Z",
-        "slug": "what-is-the-difference-between-a-predicate-and-a-",
-        "tags": [
-            5,
-            47
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 19,
-    "fields": {
-        "title": "Does std::unordered_map equality depend on insertion order",
-        "text": "If you create two std::unordered_map containers using the same set of (non equal) key-value pairs, but inserted in a different order (so the containers hold equal elements, but potentially in different orders), are the containers guaranteed to be equal, according to the equality operator (operator==). I'm assuming that the hash-code and equality operators of the container elements satisfy all the required constraints on their implementation.",
-        "author": 14,
-        "created_at": "2018-08-08T15:12:03.957Z",
-        "slug": "does-stdunordered_map-equality-depend-on-insertio",
-        "tags": [
-            49,
-            50
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 20,
-    "fields": {
-        "title": "Length of an infinite IntStream?",
-        "text": "The documentation says this stream is actually endless.\r\n\r\nI want to understand what happens there in the backround.\r\n\r\nints(0,60) is generating an infinite stream of integers. If this is infinite, why my machine is not leaking any memory?\r\n\r\nI wonder, how many numbers are actually really generated and if this implemenentation can cause an error at the point where the stream still ends? Or will this stream constantly filled with new integers on the fly and it really never ends therefore?\r\n\r\nAnd if I already ask this question, what is the best practise right now to generate random numbers nowadays?",
-        "author": 14,
-        "created_at": "2018-08-08T15:12:37.720Z",
-        "slug": "length-of-an-infinite-intstream",
-        "tags": [
-            5,
-            51,
-            52
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 21,
-    "fields": {
-        "title": "What does <? super Void> mean?",
-        "text": "I have encountered this class in code that I'm maintaining:\r\n\r\nnew GenericFutureListener<Future<? super Void>>() {...}\r\nI'm having a really hard time understanding what this means. A Future containing a type that is either Void or its superclass - Object. So why not just write Future<Object>?",
-        "author": 15,
-        "created_at": "2018-08-08T15:14:53.638Z",
-        "slug": "what-does-super-void-mean",
-        "tags": [
-            5,
-            53
-        ]
-    }
-},
-{
-    "model": "core.question",
-    "pk": 22,
-    "fields": {
-        "title": "Is there any way to trigger two changes by clicking on just one label?",
-        "text": "I have been playing with HTML and CSS to create a simple 2-player board game without using any JavaScript. I use labels, radio buttons, and checkboxes to create different states and mimic some logic so the piece will move around the board.\r\n\r\nIt works \"fine\", although the usability is not great. For example, after clicking on the dice, the tile moves, and I display a button to change to the next player (controlled again with a label and a checkbox)... which is not great, it would be better if it changed player \"automatically.\"\r\n\r\nThe problem is that the <label> can only target one element, and I don't know how to trigger two \"actions\" (or side-effects) with only one click.\r\n\r\nThe following code is an mcve to better visualize the problem: there are two players (specified by turns), a board with three tiles (represented by 6 radio buttons: 1 per player and tile), and two buttons to change player turn (only one visible). If you click on the turn change button, the turn will go to the next player. (A more complex example can be found here)\r\n\r\nThe problem is that the users are forced to press the button to change turn, otherwise the same player will always be active. Is there a way to make so that when a label is clicked on, not only the the tile gets activated, but also the turn is changed? Or in its absence, is there an alternative to achieve this? (without using JS)",
-        "author": 15,
-        "created_at": "2018-08-08T15:15:28.484Z",
-        "slug": "is-there-any-way-to-trigger-two-changes-by-clicki",
-        "tags": [
-            54,
-            55,
-            56,
-            57,
-            58
-        ]
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 1,
-    "fields": {
-        "question": 2,
-        "text": "Create a kernel.request listener. This way you can act, before anything is executed, and whole application is oblivious to the fact that the user can be logged out any minute.\r\n\r\nCall a \"service\" which will validate the token. If the token is not valid, clear authentication status and override the request. For instance, redirect the user to a \"you need to pay again\" page.\r\n\r\nThis way you don't need to modify any code, execute any voters and so on, your whole application can be protected.\r\n\r\nAs for the authentication itself, go for a custom guard, where you can fully control how the authentication process will work.",
-        "author": 3,
-        "created_at": "2018-08-08T14:17:54.198Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 2,
-    "fields": {
-        "question": 1,
-        "text": "The timeout is required to allow the DOM manipulation from the last angularjs digest cycle to complete. Without this you won't see any changes in height, text, style, class, etc.\r\n\r\nAlso, if you don't include a time after the timeout, the timeout will occur immediately after the digest completes. There was one case were we needed access outside of this and used an undocumented feature $$postDigest, this allowed us to gather data from the digest without including browser events.",
-        "author": 3,
-        "created_at": "2018-08-08T14:18:48.610Z",
-        "is_right": true
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 3,
-    "fields": {
-        "question": 3,
-        "text": "If the problem is really caused by the libraries version it is going to be tough to solve.\r\n\r\nFirst I'd double check that. You said you tested the libs separately and that they worked, but, have you tried using the output of 'VideoTrimmingLikeWhatsapp' as input of 'VideoCompressor'?",
-        "author": 2,
-        "created_at": "2018-08-08T14:20:02.800Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 4,
-    "fields": {
-        "question": 4,
-        "text": "Have you tried switching the sim cards? Just as a debugging step, swap the sim cards between a phone that didn't receive the SMS and one that did. That way, you can tell if the problem is related to your Firebase setup (which I think is unlikely) or the network.\r\n\r\nI had an issue where I had my number on a marketing opt-out list, which as a side effect caused several of these kinds of verification SMS messages to be blocked as well. That's one example, but there could be other reasons the network is blocking an SMS as well.",
-        "author": 4,
-        "created_at": "2018-08-08T14:21:14.932Z",
-        "is_right": true
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 5,
-    "fields": {
-        "question": 1,
-        "text": "In angular there are digest cycles which are usually caused by DOM manipulation that is annotated with bindings which are causing the page/part of the page to redraw. When you perform an operation which is not related to the internal mechanism of angular then the framework does not know that a digest cycle should be initiated and therefore you need sometimes to tell it explicitly to do so.",
-        "author": 4,
-        "created_at": "2018-08-08T14:26:12.796Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 6,
-    "fields": {
-        "question": 6,
-        "text": "If I'm clear, you want to estimate the Rotation of the polygon with respect to the camera. If you know the length of the object in 3D, you can use solvePnP to estimate the pose of the object, from which you can get the Rotation of the object.",
-        "author": 6,
-        "created_at": "2018-08-08T14:32:33.026Z",
-        "is_right": true
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 7,
-    "fields": {
-        "question": 5,
-        "text": "Please look into Bluetooth overview. In the section Connect as a server, you will find a code example that awaits a connection, which means that this code is aware of the button click from the bluetooth headset:",
-        "author": 6,
-        "created_at": "2018-08-08T14:33:19.466Z",
-        "is_right": true
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 8,
-    "fields": {
-        "question": 8,
-        "text": "Usually the parameter servers only store the global parameters and the workers directly apply their gradients to the global parameters (which are stored on the parameter servers). In asynchronous training no broadcasting takes place!",
-        "author": 7,
-        "created_at": "2018-08-08T14:37:07.039Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 9,
-    "fields": {
-        "question": 7,
-        "text": "I don't have a exact soluation for your problem, however, I had a similar one, namely that I wanted to add fields to a pdf from VBA.\r\n\r\nI can tell you that Adobe has a JavaScript API which you can control through vba.",
-        "author": 7,
-        "created_at": "2018-08-08T14:38:50.535Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 10,
-    "fields": {
-        "question": 5,
-        "text": "Adding my answer from there to here too.\r\n\r\nThese events are handled internally in HeadsetStateMachine (under packages/apps/Bluetooth).\r\n\r\nThese events are forwarded to IBluetoothHeadsetPhone interface. The single application to which all the events are forwarded is defined at run-time by following binding code in HeadsetStateMachine.java. This is to allow phone manufacturers to forward them to custom phone application instead of default one in cases where default one is not used",
-        "author": 7,
-        "created_at": "2018-08-08T14:39:41.011Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 11,
-    "fields": {
-        "question": 5,
-        "text": "Adding my answer from there to here too.\r\n\r\nThese events are handled internally in HeadsetStateMachine (under packages/apps/Bluetooth).\r\n\r\nThese events are forwarded to IBluetoothHeadsetPhone interface. The single application to which all the events are forwarded is defined at run-time by following binding code in HeadsetStateMachine.java. This is to allow phone manufacturers to forward them to custom phone application instead of default one in cases where default one is not used",
-        "author": 8,
-        "created_at": "2018-08-08T14:43:17.632Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 12,
-    "fields": {
-        "question": 6,
-        "text": "Your first step is good -- everything after that becomes way way way more complicated than necessary (if I understand correctly).\r\n\r\nDon't think of it as 'learning,' just think of it as a reference. Every time you're in a particular position where you DON'T know the angle, take a picture, and find the reference picture that looks most like it. Guess it's THAT angle. You're done! (They may well be indeterminacies, maybe the relationship isn't bijective, but that's where I'd start.)\r\n\r\nYou can consider this a 'nearest-neighbor classifier,' if you want, but that's just to make it sound better. Measure a simple distance (Euclidean! Why not!) between the uncertain picture, and all the reference pictures -- meaning, between the raw image vectors, nothing fancy -- and choose the angle that corresponds to the minimum distance between observed, and known.\r\n\r\nIf this isn't working -- and maybe, do this anyway -- stop throwing away so much information! You're stripping things down, then trying to re-estimate them, propagating error all over the place for no obvious (to me) benefit. So when you do a nearest neighbor, reference pictures and all that, why not just use the full picture? (Maybe other elements will change in it? That's a more complicated question, but basically, throw away as little as possible -- it should all be useful in, later, accurately choosing your 'nearest neighbor.')",
-        "author": 8,
-        "created_at": "2018-08-08T14:43:45.072Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 13,
-    "fields": {
-        "question": 7,
-        "text": "Something like this should work.\r\n\r\nYou need to have adobe acrobat installed / operational.\r\n\r\nUsed this link re method references (note i use sandboxie so not worried about links lol)",
-        "author": 8,
-        "created_at": "2018-08-08T14:44:16.048Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 14,
-    "fields": {
-        "question": 9,
-        "text": "It's hard to get your code at first as it's all in the same spot.\r\n\r\nI would first suggest breaking your code into smaller parts: ImageView, CirclesView\r\n\r\nNow after we got that done, I would want to try to make the CirclesView a bit simpler (unless you really want this animation view inside the circle).\r\n\r\nBut from your code, I didn't see the difference for the \"selectedImage\" (imgIndex)\r\n\r\nAs it has calculations for each index, but with no reference to the selected image.",
-        "author": 10,
-        "created_at": "2018-08-08T14:51:35.103Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 15,
-    "fields": {
-        "question": 9,
-        "text": "I would agree with most of Tzook notices ... but from what I see in code (intentions) all circles are animated (but in fact only one pair affected - one hides, one shows) - animating only selected one doesn't give that.\r\n\r\nI animated hundreds 'sliders/galleries' in flash ;) - what with prev/next/neighborh images - shouldn't be animated at the same time?\r\n\r\nImages with the same width (or when you can accept margins between them) are easy, you can animate container with 3 (or even only 2) images from longer (looped of course?) list/array. It's like virtual list scrolling.\r\n\r\nHaving this working circles will be easy, too - animate only 3 of them: prev/curr/next ones.\r\n\r\nSimple animations are easy - only swapping images at the end of animation. It could look harder with f.e. bouncing effects (when image slides more/farther than it's target position and next img should be visible for a while) but you can just swap them earlier, just after recognizing direction.",
-        "author": 11,
-        "created_at": "2018-08-08T14:56:59.383Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 16,
-    "fields": {
-        "question": 10,
-        "text": "This just solves the mechanics I think you want (run and save the slider value properly), and it could be used as starter point. This doesn't solve the formula of any combination of colors as you want.",
-        "author": 11,
-        "created_at": "2018-08-08T14:57:19.910Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 17,
-    "fields": {
-        "question": 11,
-        "text": "I think you can use our free tool to browse your S3/Glacier buckets and recover data: https://www.cloudberrylab.com/explorer/amazon-s3.aspx",
-        "author": 11,
-        "created_at": "2018-08-08T14:57:50.902Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 18,
-    "fields": {
-        "question": 12,
-        "text": "It is not possible to create an OpenGL Context with an version above 1.0 without any window.\r\nSee the answer to the question Creating OpenGL context without window.\r\n\r\nBut it is possible to use a completely hidden window for \"offscreen\" rendering.\r\n\r\nSadly it is not possible to create a initially hidden window with Pygame.\r\nIt is only possible to hide a window after it was created by pygame.display.iconify(). See also Hiding pygame display.",
-        "author": 11,
-        "created_at": "2018-08-08T14:58:10.567Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 19,
-    "fields": {
-        "question": 13,
-        "text": "You may use the same name (identifier). It will be a different object. They will not affect each other. Inside the inner loop, there is no way to refer to the object used in the outer loop (unless you make special provisions for that, as by providing a pointer to it).\r\n\r\nThis is generally bad style, is prone to confusion, and should be avoided.\r\n\r\nThe objects are different only if the inner one is defined separately, as with the int i you have shown. If the same name is used without defining a new object, the loops will use the same object and will interfere with each other.",
-        "author": 12,
-        "created_at": "2018-08-08T15:01:46.339Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 20,
-    "fields": {
-        "question": 13,
-        "text": "First, this is absolutely legal: the code will compile and run, repeating the body of the nested loop 10\u00d710=100 times. Loop counter i inside the nested loop will hide the counter of the outer loop, so the two counters would be incremented independently of each other.\r\n\r\nSince the outer i is hidden, the code inside the nested loop's body would have access only to the value of i of the nested loop, not i from the outer loop. In situations when the nested loop does not need access to the outer i such code could be perfectly justifiable. However, this is likely to create more confusion in its readers, so it's a good idea to avoid writing such code to avoid \"maintenance liabilities.\"",
-        "author": 13,
-        "created_at": "2018-08-08T15:04:42.285Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 21,
-    "fields": {
-        "question": 13,
-        "text": "From a code / compiler perspective this would be a perfectly valid and legal thing to do. The int i declared in the inner for(int i = 0; i < 10; i++) loop is in a new and smaller scope, so that declaration shadows the declaration of int i in the outer loop (or, with other words: In the inner scope all accesses to the variable i go to the int i declared in the inner scope, leaving the int i in the outer scope untouched).",
-        "author": 13,
-        "created_at": "2018-08-08T15:06:47.476Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 22,
-    "fields": {
-        "question": 16,
-        "text": "Array.from() is a nice way to do this. You can pass a {length: somlength} object or some other array-like object and a function that defines each item. The first argument (calling it _ just to indicate it's not used) to that function would be the item from an array we passed in (but we only passed in a length so it doesn't mean much), the second i is the index, which is used for your id:",
-        "author": 13,
-        "created_at": "2018-08-08T15:10:21.529Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.answer",
-    "pk": 23,
-    "fields": {
-        "question": 18,
-        "text": "in this case there is no difference, it matters only to the things you can apply to. So for example allMatch expects a Predicate, you can't pass a Function, even if logically they do the same thing.",
-        "author": 14,
-        "created_at": "2018-08-08T15:11:20.122Z",
-        "is_right": false
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 1,
-    "fields": {
-        "author": 3,
-        "content_type": 10,
-        "object_id": 2,
-        "value": 1
     }
 },
 {
     "model": "core.vote",
     "pk": 2,
     "fields": {
-        "author": 3,
-        "content_type": 10,
-        "object_id": 1,
+        "author": 1,
+        "receiver": 1,
         "value": -1
     }
 },
@@ -1623,9 +624,8 @@
     "model": "core.vote",
     "pk": 3,
     "fields": {
-        "author": 4,
-        "content_type": 10,
-        "object_id": 4,
+        "author": 1,
+        "receiver": 4,
         "value": 1
     }
 },
@@ -1633,9 +633,8 @@
     "model": "core.vote",
     "pk": 4,
     "fields": {
-        "author": 4,
-        "content_type": 10,
-        "object_id": 3,
+        "author": 2,
+        "receiver": 4,
         "value": 1
     }
 },
@@ -1643,19 +642,17 @@
     "model": "core.vote",
     "pk": 5,
     "fields": {
-        "author": 4,
-        "content_type": 7,
-        "object_id": 3,
-        "value": -1
+        "author": 2,
+        "receiver": 1,
+        "value": 1
     }
 },
 {
     "model": "core.vote",
     "pk": 6,
     "fields": {
-        "author": 4,
-        "content_type": 7,
-        "object_id": 2,
+        "author": 2,
+        "receiver": 5,
         "value": 1
     }
 },
@@ -1663,19 +660,17 @@
     "model": "core.vote",
     "pk": 7,
     "fields": {
-        "author": 4,
-        "content_type": 10,
-        "object_id": 1,
-        "value": -1
+        "author": 1,
+        "receiver": 5,
+        "value": 1
     }
 },
 {
     "model": "core.vote",
     "pk": 8,
     "fields": {
-        "author": 4,
-        "content_type": 7,
-        "object_id": 4,
+        "author": 3,
+        "receiver": 5,
         "value": 1
     }
 },
@@ -1683,19 +678,17 @@
     "model": "core.vote",
     "pk": 9,
     "fields": {
-        "author": 4,
-        "content_type": 10,
-        "object_id": 2,
-        "value": 1
+        "author": 3,
+        "receiver": 1,
+        "value": -1
     }
 },
 {
     "model": "core.vote",
     "pk": 10,
     "fields": {
-        "author": 4,
-        "content_type": 7,
-        "object_id": 1,
+        "author": 3,
+        "receiver": 4,
         "value": 1
     }
 },
@@ -1703,9 +696,8 @@
     "model": "core.vote",
     "pk": 11,
     "fields": {
-        "author": 5,
-        "content_type": 10,
-        "object_id": 4,
+        "author": 3,
+        "receiver": 7,
         "value": 1
     }
 },
@@ -1713,9 +705,8 @@
     "model": "core.vote",
     "pk": 12,
     "fields": {
-        "author": 5,
-        "content_type": 7,
-        "object_id": 4,
+        "author": 3,
+        "receiver": 8,
         "value": 1
     }
 },
@@ -1723,9 +714,8 @@
     "model": "core.vote",
     "pk": 13,
     "fields": {
-        "author": 5,
-        "content_type": 10,
-        "object_id": 3,
+        "author": 1,
+        "receiver": 8,
         "value": 1
     }
 },
@@ -1733,9 +723,8 @@
     "model": "core.vote",
     "pk": 14,
     "fields": {
-        "author": 5,
-        "content_type": 7,
-        "object_id": 3,
+        "author": 1,
+        "receiver": 7,
         "value": -1
     }
 },
@@ -1743,9 +732,8 @@
     "model": "core.vote",
     "pk": 15,
     "fields": {
-        "author": 5,
-        "content_type": 10,
-        "object_id": 2,
+        "author": 1,
+        "receiver": 10,
         "value": 1
     }
 },
@@ -1753,19 +741,17 @@
     "model": "core.vote",
     "pk": 16,
     "fields": {
-        "author": 5,
-        "content_type": 7,
-        "object_id": 1,
-        "value": -1
+        "author": 2,
+        "receiver": 6,
+        "value": 1
     }
 },
 {
     "model": "core.vote",
     "pk": 17,
     "fields": {
-        "author": 5,
-        "content_type": 7,
-        "object_id": 2,
+        "author": 2,
+        "receiver": 10,
         "value": 1
     }
 },
@@ -1773,9 +759,8 @@
     "model": "core.vote",
     "pk": 18,
     "fields": {
-        "author": 5,
-        "content_type": 10,
-        "object_id": 1,
+        "author": 2,
+        "receiver": 13,
         "value": -1
     }
 },
@@ -1783,29 +768,26 @@
     "model": "core.vote",
     "pk": 19,
     "fields": {
-        "author": 5,
-        "content_type": 7,
-        "object_id": 5,
-        "value": -1
+        "author": 4,
+        "receiver": 5,
+        "value": 1
     }
 },
 {
     "model": "core.vote",
     "pk": 20,
     "fields": {
-        "author": 6,
-        "content_type": 10,
-        "object_id": 6,
-        "value": -1
+        "author": 4,
+        "receiver": 6,
+        "value": 1
     }
 },
 {
     "model": "core.vote",
     "pk": 21,
     "fields": {
-        "author": 6,
-        "content_type": 10,
-        "object_id": 5,
+        "author": 4,
+        "receiver": 10,
         "value": 1
     }
 },
@@ -1813,29 +795,26 @@
     "model": "core.vote",
     "pk": 22,
     "fields": {
-        "author": 7,
-        "content_type": 10,
-        "object_id": 8,
-        "value": 1
+        "author": 4,
+        "receiver": 13,
+        "value": -1
     }
 },
 {
     "model": "core.vote",
     "pk": 23,
     "fields": {
-        "author": 7,
-        "content_type": 10,
-        "object_id": 7,
-        "value": -1
+        "author": 4,
+        "receiver": 7,
+        "value": 1
     }
 },
 {
     "model": "core.vote",
     "pk": 24,
     "fields": {
-        "author": 7,
-        "content_type": 10,
-        "object_id": 6,
+        "author": 4,
+        "receiver": 1,
         "value": -1
     }
 },
@@ -1843,19 +822,17 @@
     "model": "core.vote",
     "pk": 25,
     "fields": {
-        "author": 7,
-        "content_type": 7,
-        "object_id": 6,
-        "value": 1
+        "author": 4,
+        "receiver": 14,
+        "value": -1
     }
 },
 {
     "model": "core.vote",
     "pk": 26,
     "fields": {
-        "author": 7,
-        "content_type": 10,
-        "object_id": 5,
+        "author": 4,
+        "receiver": 12,
         "value": 1
     }
 },
@@ -1863,9 +840,8 @@
     "model": "core.vote",
     "pk": 27,
     "fields": {
-        "author": 7,
-        "content_type": 10,
-        "object_id": 4,
+        "author": 1,
+        "receiver": 12,
         "value": 1
     }
 },
@@ -1873,9 +849,8 @@
     "model": "core.vote",
     "pk": 28,
     "fields": {
-        "author": 7,
-        "content_type": 7,
-        "object_id": 4,
+        "author": 1,
+        "receiver": 6,
         "value": 1
     }
 },
@@ -1883,19 +858,17 @@
     "model": "core.vote",
     "pk": 29,
     "fields": {
-        "author": 7,
-        "content_type": 10,
-        "object_id": 2,
-        "value": 1
+        "author": 1,
+        "receiver": 13,
+        "value": -1
     }
 },
 {
     "model": "core.vote",
     "pk": 30,
     "fields": {
-        "author": 7,
-        "content_type": 7,
-        "object_id": 1,
+        "author": 1,
+        "receiver": 9,
         "value": -1
     }
 },
@@ -1903,1435 +876,186 @@
     "model": "core.vote",
     "pk": 31,
     "fields": {
-        "author": 7,
-        "content_type": 10,
-        "object_id": 3,
+        "author": 1,
+        "receiver": 15,
         "value": 1
     }
 },
 {
-    "model": "core.vote",
-    "pk": 32,
-    "fields": {
-        "author": 7,
-        "content_type": 7,
-        "object_id": 3,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 33,
-    "fields": {
-        "author": 7,
-        "content_type": 10,
-        "object_id": 1,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 34,
-    "fields": {
-        "author": 7,
-        "content_type": 7,
-        "object_id": 2,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 35,
-    "fields": {
-        "author": 7,
-        "content_type": 7,
-        "object_id": 5,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 36,
-    "fields": {
-        "author": 7,
-        "content_type": 7,
-        "object_id": 7,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 37,
-    "fields": {
-        "author": 8,
-        "content_type": 10,
-        "object_id": 8,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 38,
-    "fields": {
-        "author": 8,
-        "content_type": 7,
-        "object_id": 8,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 39,
-    "fields": {
-        "author": 8,
-        "content_type": 10,
-        "object_id": 7,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 40,
-    "fields": {
-        "author": 8,
-        "content_type": 7,
-        "object_id": 9,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 41,
-    "fields": {
-        "author": 8,
-        "content_type": 10,
-        "object_id": 6,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 42,
-    "fields": {
-        "author": 8,
-        "content_type": 7,
-        "object_id": 6,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 43,
-    "fields": {
-        "author": 8,
-        "content_type": 10,
-        "object_id": 5,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 44,
-    "fields": {
-        "author": 8,
-        "content_type": 7,
-        "object_id": 10,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 45,
-    "fields": {
-        "author": 8,
-        "content_type": 7,
-        "object_id": 7,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 46,
-    "fields": {
-        "author": 8,
-        "content_type": 10,
-        "object_id": 4,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 47,
-    "fields": {
-        "author": 8,
-        "content_type": 7,
-        "object_id": 4,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 48,
-    "fields": {
-        "author": 8,
-        "content_type": 10,
-        "object_id": 3,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 49,
-    "fields": {
-        "author": 8,
-        "content_type": 7,
-        "object_id": 3,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 50,
-    "fields": {
-        "author": 8,
-        "content_type": 10,
-        "object_id": 2,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 51,
-    "fields": {
-        "author": 8,
-        "content_type": 7,
-        "object_id": 1,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 52,
-    "fields": {
-        "author": 8,
-        "content_type": 10,
-        "object_id": 1,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 53,
-    "fields": {
-        "author": 8,
-        "content_type": 7,
-        "object_id": 2,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 54,
-    "fields": {
-        "author": 8,
-        "content_type": 7,
-        "object_id": 5,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 55,
-    "fields": {
-        "author": 8,
-        "content_type": 7,
-        "object_id": 12,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 56,
-    "fields": {
-        "author": 8,
-        "content_type": 7,
-        "object_id": 13,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 57,
-    "fields": {
-        "author": 9,
-        "content_type": 10,
-        "object_id": 10,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 58,
-    "fields": {
-        "author": 9,
-        "content_type": 10,
-        "object_id": 8,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 59,
-    "fields": {
-        "author": 9,
-        "content_type": 7,
-        "object_id": 8,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 60,
-    "fields": {
-        "author": 9,
-        "content_type": 10,
-        "object_id": 7,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 61,
-    "fields": {
-        "author": 9,
-        "content_type": 7,
-        "object_id": 9,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 62,
-    "fields": {
-        "author": 9,
-        "content_type": 7,
-        "object_id": 13,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 63,
-    "fields": {
-        "author": 9,
-        "content_type": 10,
-        "object_id": 5,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 64,
-    "fields": {
-        "author": 9,
-        "content_type": 7,
-        "object_id": 7,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 65,
-    "fields": {
-        "author": 9,
-        "content_type": 7,
-        "object_id": 10,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 66,
-    "fields": {
-        "author": 9,
-        "content_type": 7,
-        "object_id": 11,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 67,
-    "fields": {
-        "author": 9,
-        "content_type": 10,
-        "object_id": 4,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 68,
-    "fields": {
-        "author": 9,
-        "content_type": 7,
-        "object_id": 4,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 69,
-    "fields": {
-        "author": 9,
-        "content_type": 10,
-        "object_id": 2,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 70,
-    "fields": {
-        "author": 9,
-        "content_type": 7,
-        "object_id": 1,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 71,
-    "fields": {
-        "author": 9,
-        "content_type": 10,
-        "object_id": 1,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 72,
-    "fields": {
-        "author": 9,
-        "content_type": 7,
-        "object_id": 2,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 73,
-    "fields": {
-        "author": 9,
-        "content_type": 7,
-        "object_id": 5,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 74,
-    "fields": {
-        "author": 10,
-        "content_type": 10,
-        "object_id": 11,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 75,
-    "fields": {
-        "author": 10,
-        "content_type": 10,
-        "object_id": 12,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 76,
-    "fields": {
-        "author": 10,
-        "content_type": 10,
-        "object_id": 9,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 77,
-    "fields": {
-        "author": 10,
-        "content_type": 10,
-        "object_id": 10,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 78,
-    "fields": {
-        "author": 10,
-        "content_type": 7,
-        "object_id": 14,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 79,
-    "fields": {
-        "author": 10,
-        "content_type": 10,
-        "object_id": 7,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 80,
-    "fields": {
-        "author": 10,
-        "content_type": 7,
-        "object_id": 9,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 81,
-    "fields": {
-        "author": 10,
-        "content_type": 10,
-        "object_id": 5,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 82,
-    "fields": {
-        "author": 10,
-        "content_type": 7,
-        "object_id": 10,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 83,
-    "fields": {
-        "author": 10,
-        "content_type": 10,
-        "object_id": 3,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 84,
-    "fields": {
-        "author": 10,
-        "content_type": 7,
-        "object_id": 3,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 85,
-    "fields": {
-        "author": 10,
-        "content_type": 10,
-        "object_id": 1,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 86,
-    "fields": {
-        "author": 10,
-        "content_type": 7,
-        "object_id": 2,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 87,
-    "fields": {
-        "author": 10,
-        "content_type": 7,
-        "object_id": 5,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 88,
-    "fields": {
-        "author": 11,
-        "content_type": 10,
-        "object_id": 12,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 89,
-    "fields": {
-        "author": 11,
-        "content_type": 10,
-        "object_id": 11,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 90,
-    "fields": {
-        "author": 11,
-        "content_type": 10,
-        "object_id": 10,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 91,
-    "fields": {
-        "author": 11,
-        "content_type": 10,
-        "object_id": 9,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 92,
-    "fields": {
-        "author": 11,
-        "content_type": 7,
-        "object_id": 14,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 93,
-    "fields": {
-        "author": 11,
-        "content_type": 10,
-        "object_id": 7,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 94,
-    "fields": {
-        "author": 11,
-        "content_type": 7,
-        "object_id": 9,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 95,
-    "fields": {
-        "author": 11,
-        "content_type": 7,
-        "object_id": 13,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 96,
-    "fields": {
-        "author": 11,
-        "content_type": 10,
-        "object_id": 5,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 97,
-    "fields": {
-        "author": 11,
-        "content_type": 7,
-        "object_id": 10,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 98,
-    "fields": {
-        "author": 11,
-        "content_type": 10,
-        "object_id": 3,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 99,
-    "fields": {
-        "author": 11,
-        "content_type": 7,
-        "object_id": 3,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 100,
-    "fields": {
-        "author": 11,
-        "content_type": 10,
-        "object_id": 1,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 101,
-    "fields": {
-        "author": 11,
-        "content_type": 7,
-        "object_id": 2,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 102,
-    "fields": {
-        "author": 11,
-        "content_type": 7,
-        "object_id": 5,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 103,
-    "fields": {
-        "author": 11,
-        "content_type": 7,
-        "object_id": 16,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 104,
-    "fields": {
-        "author": 11,
-        "content_type": 7,
-        "object_id": 17,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 105,
-    "fields": {
-        "author": 11,
-        "content_type": 7,
-        "object_id": 18,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 106,
-    "fields": {
-        "author": 12,
-        "content_type": 10,
-        "object_id": 12,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 107,
-    "fields": {
-        "author": 12,
-        "content_type": 7,
-        "object_id": 18,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 108,
-    "fields": {
-        "author": 12,
-        "content_type": 10,
-        "object_id": 11,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 109,
-    "fields": {
-        "author": 12,
-        "content_type": 7,
-        "object_id": 17,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 110,
-    "fields": {
-        "author": 12,
-        "content_type": 10,
-        "object_id": 10,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 111,
-    "fields": {
-        "author": 12,
-        "content_type": 7,
-        "object_id": 16,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 112,
-    "fields": {
-        "author": 12,
-        "content_type": 10,
-        "object_id": 8,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 113,
-    "fields": {
-        "author": 12,
-        "content_type": 7,
-        "object_id": 8,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 114,
-    "fields": {
-        "author": 12,
-        "content_type": 10,
-        "object_id": 9,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 115,
-    "fields": {
-        "author": 12,
-        "content_type": 7,
-        "object_id": 15,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 116,
-    "fields": {
-        "author": 12,
-        "content_type": 10,
-        "object_id": 3,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 117,
-    "fields": {
-        "author": 12,
-        "content_type": 7,
-        "object_id": 3,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 118,
-    "fields": {
-        "author": 12,
-        "content_type": 10,
-        "object_id": 1,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 119,
-    "fields": {
-        "author": 12,
-        "content_type": 7,
-        "object_id": 2,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 120,
-    "fields": {
-        "author": 12,
-        "content_type": 7,
-        "object_id": 5,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 121,
-    "fields": {
-        "author": 12,
-        "content_type": 10,
-        "object_id": 13,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 122,
-    "fields": {
-        "author": 12,
-        "content_type": 7,
-        "object_id": 19,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 123,
-    "fields": {
-        "author": 12,
-        "content_type": 10,
-        "object_id": 15,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 124,
-    "fields": {
-        "author": 13,
-        "content_type": 7,
-        "object_id": 20,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 125,
-    "fields": {
-        "author": 13,
-        "content_type": 7,
-        "object_id": 19,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 126,
-    "fields": {
-        "author": 13,
-        "content_type": 10,
-        "object_id": 13,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 127,
-    "fields": {
-        "author": 13,
-        "content_type": 10,
-        "object_id": 15,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 128,
-    "fields": {
-        "author": 13,
-        "content_type": 10,
-        "object_id": 14,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 129,
-    "fields": {
-        "author": 13,
-        "content_type": 10,
-        "object_id": 12,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 130,
-    "fields": {
-        "author": 13,
-        "content_type": 7,
-        "object_id": 18,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 131,
-    "fields": {
-        "author": 13,
-        "content_type": 10,
-        "object_id": 10,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 132,
-    "fields": {
-        "author": 13,
-        "content_type": 7,
-        "object_id": 16,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 133,
-    "fields": {
-        "author": 13,
-        "content_type": 10,
-        "object_id": 3,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 134,
-    "fields": {
-        "author": 13,
-        "content_type": 7,
-        "object_id": 3,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 135,
-    "fields": {
-        "author": 13,
-        "content_type": 10,
-        "object_id": 5,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 136,
-    "fields": {
-        "author": 13,
-        "content_type": 7,
-        "object_id": 7,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 137,
-    "fields": {
-        "author": 13,
-        "content_type": 7,
-        "object_id": 10,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 138,
-    "fields": {
-        "author": 13,
-        "content_type": 7,
-        "object_id": 11,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 139,
-    "fields": {
-        "author": 13,
-        "content_type": 7,
-        "object_id": 21,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 140,
-    "fields": {
-        "author": 13,
-        "content_type": 7,
-        "object_id": 22,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 141,
-    "fields": {
-        "author": 13,
-        "content_type": 10,
-        "object_id": 16,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 142,
-    "fields": {
-        "author": 14,
-        "content_type": 10,
-        "object_id": 18,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 143,
-    "fields": {
-        "author": 14,
-        "content_type": 10,
-        "object_id": 3,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 144,
-    "fields": {
-        "author": 14,
-        "content_type": 7,
-        "object_id": 3,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 145,
-    "fields": {
-        "author": 14,
-        "content_type": 10,
-        "object_id": 5,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 146,
-    "fields": {
-        "author": 14,
-        "content_type": 7,
-        "object_id": 7,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 147,
-    "fields": {
-        "author": 14,
-        "content_type": 7,
-        "object_id": 10,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 148,
-    "fields": {
-        "author": 14,
-        "content_type": 10,
-        "object_id": 2,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 149,
-    "fields": {
-        "author": 14,
-        "content_type": 7,
-        "object_id": 1,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 150,
-    "fields": {
-        "author": 14,
-        "content_type": 10,
-        "object_id": 8,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 151,
-    "fields": {
-        "author": 14,
-        "content_type": 7,
-        "object_id": 8,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 152,
-    "fields": {
-        "author": 14,
-        "content_type": 10,
-        "object_id": 15,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 153,
-    "fields": {
-        "author": 14,
-        "content_type": 10,
-        "object_id": 16,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 154,
-    "fields": {
-        "author": 14,
-        "content_type": 7,
-        "object_id": 22,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 155,
-    "fields": {
-        "author": 14,
-        "content_type": 10,
-        "object_id": 12,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 156,
-    "fields": {
-        "author": 14,
-        "content_type": 7,
-        "object_id": 18,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 157,
-    "fields": {
-        "author": 3,
-        "content_type": 7,
-        "object_id": 4,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 158,
-    "fields": {
-        "author": 3,
-        "content_type": 10,
-        "object_id": 3,
-        "value": 1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 159,
-    "fields": {
-        "author": 5,
-        "content_type": 7,
-        "object_id": 12,
-        "value": -1
-    }
-},
-{
-    "model": "core.vote",
-    "pk": 160,
-    "fields": {
-        "author": 5,
-        "content_type": 10,
-        "object_id": 6,
-        "value": -1
-    }
-},
-{
-    "model": "profiles.userprofile",
-    "pk": 1,
-    "fields": {
-        "user": 1,
-        "avatar": "",
-        "created_at": "2018-08-08T13:55:44.562Z"
-    }
-},
-{
-    "model": "profiles.userprofile",
-    "pk": 2,
-    "fields": {
-        "user": 2,
-        "avatar": "",
-        "created_at": "2018-08-08T14:05:06.254Z"
-    }
-},
-{
-    "model": "profiles.userprofile",
-    "pk": 3,
-    "fields": {
-        "user": 3,
-        "avatar": "",
-        "created_at": "2018-08-08T14:15:52.722Z"
-    }
-},
-{
-    "model": "profiles.userprofile",
+    "model": "core.answer",
     "pk": 4,
     "fields": {
-        "user": 4,
-        "avatar": "",
-        "created_at": "2018-08-08T14:20:42.826Z"
+        "parent_question": 1,
+        "text": "Anything you want to happen in a program has to be explicitly stated - this is the nature of programming. This is like asking if you can print \"hello world\" without calling print(\"hello world\").",
+        "author": 1,
+        "created_at": "2018-08-15T21:12:24.498Z"
     }
 },
 {
-    "model": "profiles.userprofile",
-    "pk": 5,
-    "fields": {
-        "user": 5,
-        "avatar": "",
-        "created_at": "2018-08-08T14:29:01.049Z"
-    }
-},
-{
-    "model": "profiles.userprofile",
+    "model": "core.answer",
     "pk": 6,
     "fields": {
-        "user": 6,
-        "avatar": "",
-        "created_at": "2018-08-08T14:32:13.328Z"
+        "parent_question": 5,
+        "text": "The * operator, unpacks the elements from a sequence/iterable (for example, list or tuple) as positional arguments to a function\r\n\r\nOn python2, print is a statement and not a function. So import print function from future, so that you use * operator for unpacking a list elements as arguments",
+        "author": 1,
+        "created_at": "2018-08-17T17:29:56.877Z"
     }
 },
 {
-    "model": "profiles.userprofile",
-    "pk": 7,
-    "fields": {
-        "user": 7,
-        "avatar": "",
-        "created_at": "2018-08-08T14:36:41.989Z"
-    }
-},
-{
-    "model": "profiles.userprofile",
-    "pk": 8,
-    "fields": {
-        "user": 8,
-        "avatar": "",
-        "created_at": "2018-08-08T14:40:14.683Z"
-    }
-},
-{
-    "model": "profiles.userprofile",
+    "model": "core.answer",
     "pk": 9,
     "fields": {
-        "user": 9,
-        "avatar": "",
-        "created_at": "2018-08-08T14:45:24.681Z"
+        "parent_question": 8,
+        "text": "The timeout option seems to be for listen mode. I would try to run ffmpeg using the timeout command or use something similar for the framework/language your using.",
+        "author": 1,
+        "created_at": "2018-08-17T17:33:45.565Z"
     }
 },
 {
-    "model": "profiles.userprofile",
-    "pk": 10,
-    "fields": {
-        "user": 10,
-        "avatar": "",
-        "created_at": "2018-08-08T14:49:39.691Z"
-    }
-},
-{
-    "model": "profiles.userprofile",
-    "pk": 11,
-    "fields": {
-        "user": 11,
-        "avatar": "",
-        "created_at": "2018-08-08T14:54:28.688Z"
-    }
-},
-{
-    "model": "profiles.userprofile",
+    "model": "core.answer",
     "pk": 12,
     "fields": {
-        "user": 12,
-        "avatar": "",
-        "created_at": "2018-08-08T14:58:59.227Z"
+        "parent_question": 11,
+        "text": "The Solution\r\n\r\nTo Fix this simply place that first closing parenthesis at the end of the line so that all string concatenation is done within the parentheses and the whole result is printed.",
+        "author": 2,
+        "created_at": "2018-08-17T17:36:10.601Z"
     }
 },
 {
-    "model": "profiles.userprofile",
+    "model": "core.answer",
     "pk": 13,
     "fields": {
-        "user": 13,
-        "avatar": "",
-        "created_at": "2018-08-08T15:04:27.786Z"
+        "parent_question": 10,
+        "text": "I don't see that you are adding anything to your $data array.",
+        "author": 2,
+        "created_at": "2018-08-17T17:38:15.842Z"
     }
 },
 {
-    "model": "profiles.userprofile",
-    "pk": 14,
-    "fields": {
-        "user": 14,
-        "avatar": "",
-        "created_at": "2018-08-08T15:11:03.930Z"
-    }
-},
-{
-    "model": "profiles.userprofile",
+    "model": "core.answer",
     "pk": 15,
     "fields": {
-        "user": 15,
-        "avatar": "",
-        "created_at": "2018-08-08T15:14:30.100Z"
+        "parent_question": 14,
+        "text": "You can use request() method to fetch form data without any class dependencies.\r\n\r\nFor example: request()->id;",
+        "author": 1,
+        "created_at": "2018-08-17T17:41:44.223Z"
+    }
+},
+{
+    "model": "core.question",
+    "pk": 1,
+    "fields": {
+        "title": "Add time delay in every step of python code",
+        "text": "Is there an easy way to execute time delay (like time.sleep(2)) between every line of Python code without having to explicitly write it in every line of code?",
+        "author": 2,
+        "created_at": "2018-08-15T20:16:33.493Z",
+        "slug": "add-time-delay-in-every-step-of-python-code",
+        "right_answer": 4,
+        "tags": [
+            1
+        ]
+    }
+},
+{
+    "model": "core.question",
+    "pk": 5,
+    "fields": {
+        "title": "How does * operator work in python",
+        "text": "I know that it expands function arguments, but if I try something like this in Python 2.\r\nSo it appears that I am missing something about what * exactly does?",
+        "author": 2,
+        "created_at": "2018-08-17T17:29:10.546Z",
+        "slug": "how-does-operator-work-in-python",
+        "right_answer": 6,
+        "tags": [
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "core.question",
+    "pk": 7,
+    "fields": {
+        "title": "\u201cScript error.\u201d in CS-Cart",
+        "text": "CS-Cart seems to break with a \"Script error.\" HTML with a red box around. It's like I'm getting redirected, but I can't see it anywhere. I have no idea how to debug it and what data would be useful for this issue",
+        "author": 3,
+        "created_at": "2018-08-17T17:31:35.876Z",
+        "slug": "script-error-in-cs-cart",
+        "right_answer": null,
+        "tags": [
+            3,
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "core.question",
+    "pk": 8,
+    "fields": {
+        "title": "How to check live stream is still alive use \u201cffprobe\u201d command?",
+        "text": "I want to schedule a job script to check a live stream is still alive use \"ffprobe\" command. So that I can change database state for those steam already dead.",
+        "author": 3,
+        "created_at": "2018-08-17T17:33:01.197Z",
+        "slug": "how-to-check-live-stream-is-still-alive-use-ffpro",
+        "right_answer": null,
+        "tags": [
+            7,
+            8,
+            9,
+            10
+        ]
+    }
+},
+{
+    "model": "core.question",
+    "pk": 10,
+    "fields": {
+        "title": "Create JSON file and display",
+        "text": "I want to create a JSON file based in MySQL data but for some reasons my code is not working at all(I dont have any errors)",
+        "author": 1,
+        "created_at": "2018-08-17T17:35:07.554Z",
+        "slug": "create-json-file-and-display",
+        "right_answer": 13,
+        "tags": [
+            11,
+            12,
+            13,
+            14
+        ]
+    }
+},
+{
+    "model": "core.question",
+    "pk": 11,
+    "fields": {
+        "title": "Making a Python Quiz",
+        "text": "I'm doing a project that is a quiz filling the gaps and I'm having an error and I can not identify. After I fail to respond to a gap, the quiz does not show the phrase that should appear and an error appears. Can someone help me? I have tried some things and nothing happens, always when an attempt to hit is wrong it shows the error instead of showing the amount of attempts that the player still has or that he has lost. Follow the code: PS: The code is in PT_BR",
+        "author": 1,
+        "created_at": "2018-08-17T17:35:45.115Z",
+        "slug": "making-a-python-quiz",
+        "right_answer": null,
+        "tags": [
+            1
+        ]
+    }
+},
+{
+    "model": "core.question",
+    "pk": 14,
+    "fields": {
+        "title": "Pass data from class select to get route",
+        "text": "how can I pass data from this form to my route?",
+        "author": 4,
+        "created_at": "2018-08-17T17:40:32.942Z",
+        "slug": "pass-data-from-class-select-to-get-route",
+        "right_answer": null,
+        "tags": [
+            4,
+            15,
+            16
+        ]
     }
 }
 ]

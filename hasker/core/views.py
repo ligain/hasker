@@ -52,15 +52,16 @@ class CreateQuestionView(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         question_obj = form.save(commit=False)
-        question_obj.author = self.request.user
-        question_title = form.cleaned_data['title']
-        question_obj.slug = slugify(question_title)[:49]
-        question_obj.save()
-        raw_tags = form.cleaned_data['tags']
-        for raw_tag in raw_tags.split(','):
-            if raw_tag:
-                tag_obj, _ = Tag.objects.get_or_create(name=raw_tag.strip())
-                question_obj.tags.add(tag_obj)
+        with transaction.atomic():
+            question_obj.author = self.request.user
+            question_title = form.cleaned_data['title']
+            question_obj.slug = slugify(question_title)[:49]
+            question_obj.save()
+            raw_tags = form.cleaned_data['tags']
+            for raw_tag in raw_tags.split(','):
+                if raw_tag:
+                    tag_obj, _ = Tag.objects.get_or_create(name=raw_tag.strip())
+                    question_obj.tags.add(tag_obj)
         return redirect('question', slug=question_obj.slug)
 
 
@@ -76,8 +77,8 @@ class CreateAnswerView(SingleObjectMixin, FormView):
         return super().post(request, *args, **kwargs)
 
     def form_valid(self, form):
+        answer_obj = form.save(commit=False)
         with transaction.atomic():
-            answer_obj = form.save(commit=False)
             answer_obj.author = self.request.user
             answer_obj.parent_question = self.object
             answer_obj.save()
