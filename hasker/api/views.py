@@ -2,8 +2,8 @@ from rest_framework import status
 from rest_framework.generics import GenericAPIView, UpdateAPIView
 from rest_framework.response import Response
 
-from hasker.api.serializers import VoteSerializer, AnswerSerializer
-from hasker.core.models import Vote, Answer
+from hasker.api.serializers import VoteSerializer, RightAnswerSerializer
+from hasker.core.models import Vote, Answer, Question
 
 
 class VoteApiView(GenericAPIView):
@@ -14,8 +14,7 @@ class VoteApiView(GenericAPIView):
         if serializer.is_valid():
             vote, _ = Vote.objects.get_or_create(
                 author=serializer.validated_data.get('author'),
-                content_type=serializer.validated_data.get('content_type'),
-                object_id=serializer.validated_data.get('object_id'),
+                receiver=serializer.validated_data.get('receiver'),
             )
             vote.value = serializer.validated_data.get('value', 0)
             vote.save()
@@ -24,8 +23,8 @@ class VoteApiView(GenericAPIView):
 
 
 class RightAnswerUpdateApiView(UpdateAPIView):
-    queryset = Answer.objects.all()
-    serializer_class = AnswerSerializer
+    queryset = Question.objects.all()
+    serializer_class = RightAnswerSerializer
 
     def update(self, request, *args, **kwargs):
         partial = kwargs.pop('partial', False)

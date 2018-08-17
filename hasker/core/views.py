@@ -2,6 +2,7 @@ import re
 from urllib.parse import quote
 
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db import transaction
 from django.db.models import Sum, Value, Q
 from django.db.models.functions import Coalesce
 from django.http import HttpResponseForbidden
@@ -13,7 +14,7 @@ from django.utils.text import slugify
 from django.views.generic.detail import SingleObjectMixin
 from django.views.generic.edit import FormView
 
-from hasker.core.forms import CreateQuestionForm, CreateAnswerForm
+from hasker.core.forms import CreateQuestionForm, CreateAnswerForm, QueryForm
 from hasker.core.models import Question, Tag
 
 
@@ -75,10 +76,11 @@ class CreateAnswerView(SingleObjectMixin, FormView):
         return super().post(request, *args, **kwargs)
 
     def form_valid(self, form):
-        answer_obj = form.save(commit=False)
-        answer_obj.author = self.request.user
-        answer_obj.parent_question = self.object
-        answer_obj.save()
+        with transaction.atomic():
+            answer_obj = form.save(commit=False)
+            answer_obj.author = self.request.user
+            answer_obj.parent_question = self.object
+            answer_obj.save()
         return redirect('question', slug=self.kwargs['slug'])
 
 
@@ -110,14 +112,14 @@ class SearchView(ListView):
     context_object_name = 'questions'
 
     def get_queryset(self):
-        query = self.request.GET.get('q')
+        query_form = QueryForm(self.request.GET)
         queryset = super().get_queryset()
-        if query:
+        if query_form.is_valid():
             queryset = queryset.filter(
-                Q(title__icontains=query) |
-                Q(text__icontains=query)
+                Q(title__icontains=query_form.cleaned_data['q']) |
+                Q(text__icontains=query_form.cleaned_data['q'])
             ).annotate(
-                votes_rating=Coalesce(Sum('votes__value'), Value(0))
+                votes_rating=Coalesce(Sum('votereceiver_ptr__vote__value'), Value(0))
             ).order_by('-votes_rating', '-created_at')
         return queryset
 
@@ -136,7 +138,7 @@ class TagView(ListView):
 class SearchRedirectView(RedirectView):
 
     permanent = False
-    query_string = True
+    query_string = False
 
     def get_redirect_url(self, *args, **kwargs):
         input_string = self.request.POST.get('search')

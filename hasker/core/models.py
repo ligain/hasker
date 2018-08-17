@@ -21,7 +21,6 @@ class VoteReceiver(models.Model):
 
     @property
     def rating(self):
-        print(1)
         rating_dict = self.votes.aggregate(Sum('value'))
         if rating_dict.get('value__sum') is None:
             return 0

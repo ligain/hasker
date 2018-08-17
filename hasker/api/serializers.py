@@ -2,7 +2,7 @@ from django.contrib.auth import get_user_model
 
 from rest_framework import serializers
 
-from hasker.core.models import Vote, Answer
+from hasker.core.models import Vote, VoteReceiver, Question
 
 
 class AuthorValidator:
@@ -23,28 +23,32 @@ class VoteSerializer(serializers.ModelSerializer):
         queryset=get_user_model().objects.all(),
         default=serializers.CurrentUserDefault()
     )
+    receiver = serializers.PrimaryKeyRelatedField(
+        queryset=VoteReceiver.objects.all()
+    )
 
     class Meta:
         model = Vote
-        fields = ('author', 'content_type', 'object_id', 'value')
+        fields = ('author', 'receiver', 'value')
 
 
-class AnswerSerializer(serializers.ModelSerializer):
+class RightAnswerSerializer(serializers.ModelSerializer):
 
-    def validate_is_right(self, value):
+    def validate_right_answer(self, value):
         message = 'The right answer is already selected'
-        question = self.instance.question
-        right_answer = question.answers.filter(is_right=True).first()
-        if not right_answer:
-            return value
-        elif right_answer.id != self.instance.id:
-            # Trying to mark another answer as right
+        right_answer = self.instance.question.right_answer
+        if right_answer and right_answer != value:
             raise serializers.ValidationError(message)
         return value
 
     class Meta:
-        model = Answer
-        fields = ('is_right', )
+        model = Question
+        fields = ('right_answer', )
         validators = [
             AuthorValidator(),
         ]
+
+    def save(self, **kwargs):
+        if self.instance.right_answer == self.validated_data['right_answer']:
+            self.validated_data['right_answer'] = None
+        return super().save(**kwargs)

@@ -16,16 +16,14 @@
         <div class="col-sm-1 rating text-center">
             <i
                     class="fas fa-angle-up {% voted_class user question 1 %}"
-                    data-content-type="{{ question.votes.content_type.id }}"
-                    data-object-id="{{ question.id }}"
+                    data-votereceiver-id="{{ question.votereceiver_ptr_id }}"
                     data-value="1"></i>
 
                 <strong class="rating-counter-js">{{ question.rating }}</strong>
 
                 <i
                     class="fas fa-angle-down {% voted_class user question -1 %}"
-                    data-content-type="{{ question.votes.content_type.id }}"
-                    data-object-id="{{ question.id }}"
+                    data-votereceiver-id="{{ question.votereceiver_ptr_id }}"
                     data-value="-1"></i>
 
         </div>
@@ -52,28 +50,30 @@
             <div class="col-sm-1 rating text-center">
                 <i
                     class="fas fa-angle-up {% voted_class user answer 1 %}"
-                    data-content-type="{{ answer.votes.content_type.id }}"
-                    data-object-id="{{ answer.id }}"
+                    data-votereceiver-id="{{ answer.votereceiver_ptr_id }}"
                     data-value="1"></i>
 
                 <strong class="rating-counter-js">{{ answer.rating }}</strong>
 
                 <i
                     class="fas fa-angle-down {% voted_class user answer -1 %}"
-                    data-content-type="{{ answer.votes.content_type.id }}"
-                    data-object-id="{{ answer.id }}"
+                    data-votereceiver-id="{{ answer.votereceiver_ptr_id }}"
                     data-value="-1"></i>
 
 
-                {% if answer.is_right and question.author == user %}
+                {% if question.right_answer_id == answer.id and question.author == user %}
                     <i
                         class="fas fa-star text-warning"
+                        data-question-id="{{ question.id }}"
                         data-answer-id="{{ answer.id }}"></i>
+
                 {% elif question.author == user %}
                     <i
                         class="far fa-star"
+                        data-question-id="{{ question.id }}"
                         data-answer-id="{{ answer.id }}"></i>
-                {% elif answer.is_right %}
+
+                {% elif question.right_answer_id == answer.id %}
                     <i class="fas fa-star text-warning"></i>
                 {% else %}
                     <i class="far fa-star"></i>

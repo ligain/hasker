@@ -28,3 +28,7 @@ class CreateAnswerForm(forms.ModelForm):
     class Meta:
         model = Answer
         fields = ('text', )
+
+
+class QueryForm(forms.Form):
+    q = forms.CharField(max_length=100)

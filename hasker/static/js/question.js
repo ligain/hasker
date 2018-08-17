@@ -29,8 +29,7 @@ $(function () {
         var url = "/api/v1/votes/";
         var arrow = $(this);
         var data = {
-            "content_type": $(this).data("content-type"),
-            "object_id": $(this).data("object-id"),
+            "receiver": $(this).data("votereceiver-id"),
             "value": $(this).data("value")
         };
         console.log(data);
@@ -63,15 +62,15 @@ $(function () {
     });
     
     $('.fa-star').on('click', function () {
-        if (! $(this).data("answer-id")) {
+        if (! $(this).data("question-id")) {
             $('.modal-body').text("Only author can choose the right answer!");
             $('#error').modal('show');
             return
         }
 
-        var url = "/api/v1/answers/" + $(this).data("answer-id") + "/";
+        var url = "/api/v1/right-answer/" + $(this).data("question-id") + "/";
         var data = {
-            "is_right": !$(this).hasClass(star_highlight_class)
+            "right_answer": $(this).data("answer-id")
         };
         var star = $(this);
 
@@ -82,7 +81,7 @@ $(function () {
             data: data,
             xhrFields: {withCredentials: true},
             success: function (data) {
-                if (data.is_right) {
+                if (data.right_answer) {
                     star.removeClass('far').addClass('fas');
                     star.addClass(star_highlight_class);
                 } else {
@@ -93,7 +92,7 @@ $(function () {
             },
             error: function (error) {
                 if (error.responseJSON) {
-                    var error_msg = error.responseJSON.is_right[0];
+                    var error_msg = error.responseJSON.right_answer[0];
                 } else {
                     var error_msg = error.statusText
                 }

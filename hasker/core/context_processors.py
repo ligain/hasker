@@ -5,11 +5,8 @@ from hasker.core.models import Question
 
 
 def trending(request):
-    # return {
-    #     'trending_questions': Question.objects.annotate(
-    #             votes_rating=Coalesce(Sum('votes__value'), Value(0))
-    #         ).order_by('-votes_rating')[:20]
-    # }
     return {
-            'trending_questions': Question.objects.none()
-        }
+        'trending_questions': Question.objects.annotate(
+                votes_rating=Coalesce(Sum('votereceiver_ptr__vote__value'), Value(0))
+            ).order_by('-votes_rating')[:20]
+    }
