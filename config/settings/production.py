@@ -16,3 +16,5 @@ DATABASES = {
 }
 
 SECRET_KEY = get_env_variable('SECRET_KEY')
+
+REST_FRAMEWORK['PAGE_SIZE'] = 20

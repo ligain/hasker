@@ -1,3 +1,5 @@
+import datetime
+
 from .base import *
 
 DEBUG = True
@@ -18,3 +20,9 @@ DATABASES = {
 }
 
 SECRET_KEY = get_env_variable('SECRET_KEY')
+
+JWT_AUTH = {
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=5),
+}
+
+REST_FRAMEWORK['PAGE_SIZE'] = 2

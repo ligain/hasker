@@ -2,7 +2,7 @@ from django.contrib.auth import get_user_model
 
 from rest_framework import serializers
 
-from hasker.core.models import Vote, VoteReceiver, Question
+from hasker.core.models import Vote, VoteReceiver, Question, Answer
 
 
 class AuthorValidator:
@@ -52,3 +52,37 @@ class RightAnswerSerializer(serializers.ModelSerializer):
         if self.instance.right_answer == self.validated_data['right_answer']:
             self.validated_data['right_answer'] = None
         return super().save(**kwargs)
+
+
+class AnswersField(serializers.Field):
+
+    def to_representation(self, answers):
+        return answers.count()
+
+
+class QuestionSerializer(serializers.ModelSerializer):
+    tags = serializers.SlugRelatedField(
+        many=True,
+        read_only=True,
+        slug_field='name'
+    )
+    author = serializers.StringRelatedField(read_only=True)
+    answers = AnswersField()
+
+    class Meta:
+        model = Question
+        fields = ('title', 'text', 'slug', 'tags', 'author', 'created_at', 'rating', 'answers')
+
+
+class TrendingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Question
+        fields = ('title', 'rating')
+
+
+class AnswerSerializer(serializers.ModelSerializer):
+    author = serializers.StringRelatedField(read_only=True)
+
+    class Meta:
+        model = Answer
+        fields = ('text', 'author', 'created_at', 'rating')
