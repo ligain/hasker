@@ -1,9 +1,12 @@
 # Hasker: API
-  API is available by path `http://localhost:8000/api/v1`
-  All API call should be performed by authorized user. To authorize you need to obtain JWT token.
- We have test user in initial data with credentials:
- *username=superadmin* and *password=superadminsuperadmin*
- Swagger doc is here: `http://localhost:8000/api-doc/` ![Hasker screenshot](https://github.com/ligain/hasker/tree/master/hasker/static/img/screenshots/Screenshot_swagger.png?raw=true "API schema screenshot")
+API is available by path `http://localhost:8000/api/v1`
+All API call should be performed by authorized user. To authorize you need to obtain JWT token.
+We have test user in initial data with credentials:
+*username=superadmin* and *password=superadminsuperadmin*
+Swagger doc is here: `http://localhost:8000/api-doc/`
+
+![Api doc](https://github.com/ligain/hasker/raw/master/hasker/static/img/screenshots/Screenshot_swagger.png)
+
 
 ### Obtain JWT token
 Method: **POST**
