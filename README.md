@@ -1,6 +1,6 @@
 # Hasker: Semi-Demi Stack Overflow
 Yet another clone of the [Stack Overflow](https://stackoverflow.com/).
-![Hasker screenshot](https://github.com/ligain/hasker/tree/master/hasker/static/img/screenshots/Screenshot.png?raw=true "Hasker screenshot")
+![Hasker screenshot](https://github.com/ligain/hasker/raw/master/hasker/static/img/screenshots/Screenshot.png "Hasker screenshot")
 
 ## How to run
 You should have `docker` and `docker-compose`  installed before running project.
