@@ -27,10 +27,9 @@ schema_view = get_swagger_view(title='Hasker API')
 urlpatterns = [
     path('', include('hasker.core.urls')),
     path('', include('hasker.profiles.urls', namespace='profiles')),
-    path('api/v1/', include('hasker.api.urls')),
+    path('api/v1/', include('hasker.api.urls', namespace='api1')),
     path('admin/', admin.site.urls),
-    # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^api-token-auth/', obtain_jwt_token),
-    url(r'^api-token-verify/', verify_jwt_token),
+    url(r'^api-token-auth/', obtain_jwt_token, name='obtain_jwt_token'),
+    url(r'^api-token-verify/', verify_jwt_token, name='verify_jwt_token'),
     url(r'api-doc/', schema_view)
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
